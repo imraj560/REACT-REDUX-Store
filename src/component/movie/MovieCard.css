@@ -1,0 +1,39 @@
+.movie__Card{
+
+    margin: 5px;
+    text-align: center;
+    
+}
+
+/* .movieCard__image{
+    min-height: 350px;
+    min-width: 250px;
+    background-image: url('https://marketplace.canva.com/EAFH4NHZv_8/1/0/1131w/canva-white-mystery-movie-poster-UfgB1AQbfvk.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.card__Top > img{
+
+    height: 450px;
+    width: 300px;
+}
+
+.purchase_button{
+
+    padding:5px;
+    color:white;
+    font-size: 18px;
+    background-color:black;
+    border-radius: 5px;
+    cursor:pointer;
+    display: block;
+    width: 100%;
+}
+
+.title{
+
+    font-size: 20px;
+    font-weight: 500;
+}

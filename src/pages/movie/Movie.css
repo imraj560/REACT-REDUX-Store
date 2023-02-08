@@ -1,0 +1,15 @@
+.movie__Div{
+    padding: 20px;
+}
+
+.movie__Page{
+
+    display: flex;
+    justify-content: space-between;
+    overflow-x: scroll;
+
+}
+
+.movie__Page::-webkit-scrollbar {
+    display: none;
+  }

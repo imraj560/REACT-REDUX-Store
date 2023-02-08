@@ -1,0 +1,117 @@
+header{
+    width: 100%;
+    height: 80px;
+    background:black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+    z-index: 1;
+}
+
+.logo{
+
+    font-size: 30px;
+    font-weight: 600;
+    cursor:pointer;
+    color:white;
+    transition: 0.2s;
+}
+
+.logo:hover{
+
+    font-size: 40px;
+}
+
+/* this is used for smaller screen size */
+.hamburger{
+    display: none;
+}
+
+
+.nav-bar > ul{
+
+    display: flex;
+
+}
+
+.nav-bar > ul > li > a{
+
+    display: block;
+    padding:0px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor:pointer;
+    transition: 0.2s;
+    color: white;
+}
+
+.nav-bar > ul > li > a:hover{
+
+    font-size:16px;
+}
+
+/* Media query css */
+
+@media only screen and (max-width: 900px) {
+
+    header{
+
+        position: relative;
+    }
+
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px 0;
+    }
+
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-bar{
+
+        position: absolute;
+        top:80px;
+        width: 100vw;
+        height: 0px;
+        left:0;
+        right: 0;
+        transition: 0.5s;
+        background-color: #f1f0f5;
+        overflow: hidden;
+
+    }
+
+    .nav-bar > ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+       
+    }
+
+    .nav-bar > ul > li{
+
+        margin: 10px 0px;
+        background-color: white;
+        padding: 10px 0px;
+        border-radius: 20px;
+    }
+
+   .nav-bar.active{
+
+    height: 450px;
+
+   }
+
+   .nav-bar.active > ul{
+
+    opacity: 1;
+   }
+}

@@ -1,0 +1,125 @@
+[
+    {
+      "id": 1,
+      "title": "Spider Man",
+      "image": "https://m.media-amazon.com/images/M/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_.jpg",
+      "price": "67.89"
+
+    },
+    {
+      "id": 2,
+      "title": "Batman 2022",
+      "image": "https://m.media-amazon.com/images/M/MV5BYTExZTdhY2ItNGQ1YS00NjJlLWIxMjYtZTI1MzNlMzY0OTk4XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
+      "price": "45.60"
+    },
+    {
+      "id": 3,
+      "title": "Superman Returns",
+      "image": "https://m.media-amazon.com/images/M/MV5BNzY2ZDQ2MTctYzlhOC00MWJhLTgxMmItMDgzNDQwMDdhOWI2XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_FMjpg_UX1000_.jpg",
+      "price": "23,78"
+    },
+    {
+      "id": 4,
+      "title": "Toy Story",
+      "image": "https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_.jpg",
+      "price": "90.88"
+    },
+    {
+      "id": 5,
+      "title": "Monsters Inc",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTY1NTI0ODUyOF5BMl5BanBnXkFtZTgwNTEyNjQ0MDE@._V1_.jpg",
+      "price": "12.76"
+    },
+    {
+      "id": 6,
+      "title": "Finding Nemo",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTc5NjExNTA5OV5BMl5BanBnXkFtZTYwMTQ0ODY2._V1_FMjpg_UX1000_.jpg",
+      "price": "54.65"
+    },
+    {
+      "id": 7,
+      "title": "Captian America",
+      "image": "https://m.media-amazon.com/images/M/MV5BMzA2NDkwODAwM15BMl5BanBnXkFtZTgwODk5MTgzMTE@._V1_FMjpg_UX1000_.jpg",
+      "price": "34.87"
+    },
+    {
+      "id": 8,
+      "title": "Iron Man",
+      "image": "https://m.media-amazon.com/images/M/MV5BMjE5MzcyNjk1M15BMl5BanBnXkFtZTcwMjQ4MjcxOQ@@._V1_FMjpg_UX1000_.jpg",
+      "price": "90.87"
+    },
+    {
+      "id": 9,
+      "title": "Hulk",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_.jpg",
+      "price": "23.56"
+    },
+    {
+      "id": 10,
+      "title": "Antman",
+      "image": "https://m.media-amazon.com/images/M/MV5BYjcyYTk0N2YtMzc4ZC00Y2E0LWFkNDgtNjE1MzZmMGE1YjY1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg",
+      "price": "98.87"
+    },
+    {
+      "id": 11,
+      "title": "Thor",
+      "image": "https://m.media-amazon.com/images/M/MV5BOGE4NzU1YTAtNzA3Mi00ZTA2LTg2YmYtMDJmMThiMjlkYjg2XkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg",
+      "price": "56.54"
+    },
+    {
+      "id": 12,
+      "title": "Black Panter",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_.jpg",
+      "price": "11.34"
+    },
+    {
+      "id": 13,
+      "title": "Avengers",
+      "image": "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+      "price": "67.77"
+    },
+    {
+      "id": 14,
+      "title": "Bourne Identity",
+      "image": "https://m.media-amazon.com/images/M/MV5BM2JkNGU0ZGMtZjVjNS00NjgyLWEyOWYtZmRmZGQyN2IxZjA2XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_FMjpg_UX1000_.jpg",
+      "price": "22.34"
+    },
+    {
+      "id": 15,
+      "title": "Godzilla",
+      "image": "https://m.media-amazon.com/images/M/MV5BOGFjYWNkMTMtMTg1ZC00Y2I4LTg0ZTYtN2ZlMzI4MGQwNzg4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+      "price": "12.34"
+    },
+    {
+      "id": 16,
+      "title": "Kong Skulll Island",
+      "image": "https://m.media-amazon.com/images/M/MV5BMWUxNjZiNTAtZmMwMi00MmYxLTkxZGEtZWE1MzU0OWFjOTNhXkEyXkFqcGdeQXVyNzk1MzI3MTI@._V1_FMjpg_UX1000_.jpg",
+      "price": "56.66"
+    },
+    {
+      "id": 17,
+      "title": "In pursuit of Happiness",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTQ5NjQ0NDI3NF5BMl5BanBnXkFtZTcwNDI0MjEzMw@@._V1_FMjpg_UX1000_.jpg",
+      "price": "12.44"
+    },
+    {
+      "id": 18,
+      "title": "Pacific Rim",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTY3MTI5NjQ4Nl5BMl5BanBnXkFtZTcwOTU1OTU0OQ@@._V1_FMjpg_UX1000_.jpg",
+      "price": "67.77"
+      
+    },
+    {
+      "id": 19,
+      "title": "Transformers",
+      "image": "https://m.media-amazon.com/images/M/MV5BMTkwOTY0MTc1NV5BMl5BanBnXkFtZTcwMDQwNjA2NQ@@._V1_.jpg",
+      "price": "12.34"
+    },
+    {
+      "id": 20,
+      "title": "Creed",
+      "image": "https://m.media-amazon.com/images/M/MV5BZWYzZDNhODMtYzk2ZC00ZTE2LTk2MTgtY2M3NjgyYzVjMTcyXkEyXkFqcGdeQXVyNTU1OTA4OTg@._V1_.jpg",
+      "price": "55.55"
+    }
+
+  ]
