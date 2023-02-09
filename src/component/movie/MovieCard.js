@@ -1,22 +1,27 @@
 import React from 'react';
+import  Col  from 'react-bootstrap/Col';
+import  Card  from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
 import './MovieCard.css';
 
-const MovieCard = (props) => {
+const MovieCard = ({movieProp}) => {
 
-  const {data} = props;
+  const {id,title,price,image} = movieProp;
 
   return (
 
-    <div className='movie__Card'>
-      <div className='card__Inner'>
-        <div className='card__Top'>
-          
-            <img src={data.image} alt="movie_poster"/>
-        </div>
-        <span className='title'>{data.title}</span>
-        <button className='purchase_button'>Add to Cart</button>
-      </div>
-    </div> 
+    <Col>
+         <Card key={id} style={{ width: '18rem' }}>
+          <Card.Img variant="top" src={image} />
+          <Card.Body>
+            <Card.Title>{title}</Card.Title>
+            <Card.Text>
+             {price}
+            </Card.Text>
+            <Button variant="primary">Add To Cart</Button>
+          </Card.Body>
+         </Card>
+    </Col>
 
   )
 }

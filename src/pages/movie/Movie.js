@@ -6,6 +6,8 @@ import { useSelector } from 'react-redux';
 import MovieCard from '../../component/movie/MovieCard';
 import Login from '../login/Login';
 import AuthComponent from '../../component/authNav/AuthComponent';
+import  Container  from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
 
 
 const Movie = () => {
@@ -17,13 +19,22 @@ const Movie = () => {
 
   return (
     <AuthComponent>
-         <div className='movie__Div'>
+         <Container>
+          <Row>
 
-          {getMovies.map((data)=>(
-            <MovieCard data={data} />
-          ))}
+             {
+              
+             getMovies.map((data)=>(
+               <MovieCard movieProp={data} />
+              ))
+              
+              }
 
-         </div>
+          </Row>
+
+         
+
+         </Container>
         
 
     </AuthComponent>
