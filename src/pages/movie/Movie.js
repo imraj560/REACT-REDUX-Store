@@ -10,37 +10,21 @@ import AuthComponent from '../../component/authNav/AuthComponent';
 
 const Movie = () => {
 
-  const movies = useSelector(getAllMovies);
-  return movies;
-  const user = useSelector(selectUser);
+  const user_redux_data = useSelector(selectUser);
 
+  const getMovies = useSelector(getAllMovies);
 
-  let renderMovies = " ";
-
-  renderMovies = movies.Response === "True" ? (
-
-    movies.Search.map((movie, index)=>(
-
-      <MovieCard key={index} data={movie} />
-
-    ))
-
- 
-
-  ):(<div><h3>No movies</h3></div>);
 
   return (
     <AuthComponent>
-    <div className='movie__Div'>
+         <div className='movie__Div'>
 
-          <h3>Harry Potter Series</h3>
+          {getMovies.map((data)=>(
+            <MovieCard data={data} />
+          ))}
 
-          <div className='movie__Page'>
-              {renderMovies}
-            
-
-          </div>
-        </div>
+         </div>
+        
 
     </AuthComponent>
    
