@@ -1,5 +1,7 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { addMovies } from '../../features/movieSlice';
+import { useDispatch } from 'react-redux';
 import './Login.css';
 import { toast, ToastContainer } from 'react-toastify';
 import { NavLink } from 'react-router-dom';
@@ -11,9 +13,29 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
   
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  useEffect(()=>{
+
+   
+    fetch("utils/data.json")
+    .then((response) => {
+      console.log("resolved", response);
+  return response.json();
+    })
+    .then((data) => {
+      dispatch(addMovies(data));
+    })
+    .catch((err) => {
+      console.log("error retrieving data", err);
+    });
+
+
+  },[])
+
 
   const login = (e)=>{
 
@@ -27,7 +49,7 @@ const Login = () => {
         console.log(user);
         
         toast.success("Login Successful...");
-        navigate('/');
+        navigate('/movie');
 
         
       })
@@ -64,4 +86,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Login 
