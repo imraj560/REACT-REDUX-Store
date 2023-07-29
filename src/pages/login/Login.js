@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { addMovies } from '../../features/movieSlice';
 import { useDispatch } from 'react-redux';
 import './Login.css';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast} from 'react-toastify';
 import { NavLink } from 'react-router-dom';
 import { auth } from '../../firebase/config';
 import { signInWithEmailAndPassword } from 'firebase/auth';
@@ -18,23 +18,23 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  useEffect(()=>{
+  // useEffect(()=>{
 
    
-    fetch("utils/data.json")
-    .then((response) => {
-      console.log("resolved", response);
-  return response.json();
-    })
-    .then((data) => {
-      dispatch(addMovies(data));
-    })
-    .catch((err) => {
-      console.log("error retrieving data", err);
-    });
+  //   fetch("utils/data.json")
+  //   .then((response) => {
+  //     console.log("resolved", response);
+  // return response.json();
+  //   })
+  //   .then((data) => {
+  //     dispatch(addMovies(data));
+  //   })
+  //   .catch((err) => {
+  //     console.log("error retrieving data", err);
+  //   });
 
 
-  },[])
+  // },[])
 
 
   const login = (e)=>{
@@ -48,7 +48,9 @@ const Login = () => {
         const user = userCredential.user;
         console.log(user);
         
-        toast.success("Login Successful...");
+        toast.success('Success Notification !', {
+          position: toast.POSITION.TOP_RIGHT
+      });
         navigate('/movie');
 
         
@@ -64,8 +66,6 @@ const Login = () => {
 
   return (
     <div className='login__div'>
-       <ToastContainer/>
-
       <h2>Login </h2>
       <form>
        

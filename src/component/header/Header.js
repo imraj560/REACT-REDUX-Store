@@ -1,5 +1,4 @@
 import React from 'react'
-import './Header.css';
 import { NavLink } from 'react-router-dom';
 import { auth } from '../../firebase/config';
 import { toast } from 'react-toastify';
@@ -9,6 +8,7 @@ import { logout } from '../../features/userSlice';
 import { useDispatch } from 'react-redux';
 import LoginLink from '../authNav/LoginLink';
 import LogoutLink from '../authNav/LogoutLink';
+import './Header.css';
 
 const Header = () => {
 
@@ -53,8 +53,9 @@ const Header = () => {
           <ul>
             <li><LogoutLink><NavLink to="/login"><a>Login</a></NavLink></LogoutLink></li>
             <li><LoginLink><NavLink to="/movie"><a>Movies</a></NavLink></LoginLink></li>
-            <li><LoginLink><a>Hi Raju</a></LoginLink></li>
-            <li><LoginLink><a onClick={logOut}>Logout</a></LoginLink></li>
+            <li><LoginLink><NavLink to="/cart"><a>Cart</a></NavLink></LoginLink></li>
+            <li><LoginLink><NavLink><a>Hi Raju</a></NavLink></LoginLink></li>
+            <li><LoginLink><NavLink><a onClick={logOut}>Logout</a></NavLink></LoginLink></li>
           </ul>
        </nav>
     </header>

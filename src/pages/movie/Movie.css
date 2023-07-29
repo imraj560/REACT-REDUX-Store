@@ -1,15 +1,26 @@
-.movie__Div{
-    padding: 20px;
+
+.row{
+
+    width:100vw;
+    margin: 0 auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
 }
 
-.movie__Page{
+.search{
 
-    display: flex;
-    justify-content: space-between;
-    overflow-x: scroll;
-
+    width: 100vw;
+    height: 50px;
+    /* background-color: red; */
+    padding:15px 30px 0px 30px;
 }
 
-.movie__Page::-webkit-scrollbar {
-    display: none;
-  }
+.search > input{
+
+    width: 100%;
+    padding: 10px;
+    border:3px solid gray;
+    border-radius: 5px;
+}
+
