@@ -1,9 +1,38 @@
 import React, { useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeCartItem, incrementQuantity, decrementQuantity} from '../../features/cartSlice';
 import './Cart.css';
+
 const Cart = () => {
 
-    const cartItem = useSelector((state) => state.cart.cart)
+    const dispatch = useDispatch();
+
+    const cartItem = useSelector((state) => state.cart.cart);
+
+    const quantityTotal = ()=>{
+
+      let total = 0;
+
+      cartItem.forEach(item => {
+          total+= item.quantity
+      });
+
+      return total;
+    }
+
+    let avg = 0;
+    const avgTotal = ()=>{
+
+      cartItem.forEach(item=>{
+
+        avg += item.quantity * item.price;
+
+      })
+
+      return avg.toFixed(3);
+
+    }
+
 
   return (
     <div className='row'>
@@ -23,6 +52,14 @@ const Cart = () => {
               <tbody>
                 {
                   cartItem.map((data)=>{
+                      
+                    const qtyPrice = ()=>{
+
+                      let price;
+                      price = data.price * data.quantity;
+
+                      return price.toFixed(3);
+                    }
 
                     return(
 
@@ -30,10 +67,14 @@ const Cart = () => {
 
                         <td>{data.title}</td>
                         <td>{data.price}</td>
-                        <td></td>
-                        <td></td>
                         <td>
-                          <button className='delete'>x</button>
+                            <button className='quantity' onClick={()=>dispatch(incrementQuantity(data.id))}>+</button>
+                            {data.quantity}
+                            <button className='quantity' onClick={()=>dispatch(decrementQuantity(data.id))}>-</button>
+                        </td>
+                        <td>{qtyPrice()}</td>
+                        <td>
+                          <button className='delete' onClick={()=>dispatch(removeCartItem(data.id))}>x</button>
                         </td>
 
                       </tr>
@@ -47,26 +88,19 @@ const Cart = () => {
 
               <tfooter>
                 <tr>
-                  <td colSpan={3}>Total</td>
-                  <td>455.55</td>
+                  <td colSpan={3}>Total Quantity</td>
+                  <td>{quantityTotal()}</td>
+
+                  <td colSpan={3}>Total Price</td>
+                  <td>{avgTotal()}</td>
+                
                 </tr>
               </tfooter>
 
             </table>
             
 
-               {
-                 cartItem.map((item)=>{
-                  <div>
-
-                     <p key={item.id}>{item.title}</p>
-                  </div>
-                  
-                   
-                 })
-
-                }  
-            
+             
 
            
           
