@@ -1,43 +1,52 @@
-
-import './Movie.css';
-import { getAllMovies } from '../../features/movieSlice';
-import { selectUser } from '../../features/userSlice';
-import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
 import MovieCard from '../../component/movie/MovieCard';
-import Login from '../login/Login';
-import AuthComponent from '../../component/authNav/AuthComponent';
-import  Container  from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
+import './Movie.css';
 
 
 const Movie = () => {
 
-  const user_redux_data = useSelector(selectUser);
+ const [movie, setMovie] = useState([]);//initially its an empty array
 
-  const getMovies = useSelector(getAllMovies);
+  useEffect(()=>{
+    
+
+    fetch('utils/data.json').then((response)=>{
+
+        return response.json();
+
+    }).then((api_data)=>{
+
+    setMovie(api_data);
+     
+
+    })
+    .then((err)=>{
+
+        console.log(err, "logging error");
+      
+    });
+
+  },[]);
 
 
   return (
-    <AuthComponent>
-         <Container>
-          <Row>
+   
+            <div className='row'>
 
              {
               
-             getMovies.map((data)=>(
-               <MovieCard movieProp={data} />
+
+             movie.map((api_data)=>(
+
+              
+             <MovieCard movieProp={api_data} />
+              
               ))
               
               }
 
-          </Row>
+          </div>
 
-         
-
-         </Container>
-        
-
-    </AuthComponent>
    
    
   )

@@ -1,28 +1,23 @@
 import React from 'react';
-import  Col  from 'react-bootstrap/Col';
-import  Card  from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import './MovieCard.css';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../features/cartSlice';
 
 const MovieCard = ({movieProp}) => {
+
+  const dispatch = useDispatch();
 
   const {id,title,price,image} = movieProp;
 
   return (
 
-    <Col>
-         <Card key={id} style={{ width: '18rem' }}>
-          <Card.Img variant="top" src={image} />
-          <Card.Body>
-            <Card.Title>{title}</Card.Title>
-            <Card.Text>
-             {price}
-            </Card.Text>
-            <Button variant="primary">Add To Cart</Button>
-          </Card.Body>
-         </Card>
-    </Col>
-
+            <div className='column'>
+              <img src={image} width="100%" height="80%"  />
+              <h3>{title} : RM {price}</h3>
+              <button
+               onClick={()=>dispatch(addToCart({id,title,image,price}))}>
+                Add to Cart</button>
+            </div>
   )
 }
 

@@ -8,6 +8,7 @@ import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Movie from './pages/movie/Movie';
+import Cart from './pages/cart/Cart';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { login, logout, selectUser } from './features/userSlice';
@@ -51,8 +52,8 @@ function App() {
       
       <BrowserRouter>
      
-
-         <ToastContainer/>
+        <ToastContainer/>
+       
         <Header/>
         
           <Routes>       
@@ -60,6 +61,7 @@ function App() {
               <Route path="/login" element={<Login/>}/>
               <Route path="/register" element={<Register/>}/>
               <Route path="/movie" element={<Movie/>}/>
+              <Route path="/cart" element={<Cart/>}/>
           </Routes>
 
      
