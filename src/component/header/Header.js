@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { logout } from '../../features/userSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import LoginLink from '../authNav/LoginLink';
 import LogoutLink from '../authNav/LogoutLink';
 import './Header.css';
@@ -14,6 +14,17 @@ const Header = () => {
 
  const navigate = useNavigate();  
  const dispatch = useDispatch();
+
+ const cartItem = useSelector((state) => state.cart.cart);
+
+ let totalQty = 0;
+ cartItem.forEach(item => {
+
+   totalQty += item.quantity;
+
+   return totalQty;
+
+ });
 
  const toggleClass = () => {
 
@@ -53,7 +64,7 @@ const Header = () => {
           <ul>
             <li><LogoutLink><NavLink to="/login"><a>Login</a></NavLink></LogoutLink></li>
             <li><LoginLink><NavLink to="/movie"><a>Movies</a></NavLink></LoginLink></li>
-            <li><LoginLink><NavLink to="/cart"><a>Cart</a></NavLink></LoginLink></li>
+            <li><LoginLink><NavLink to="/cart"><a>Cart&nbsp;:{totalQty}</a></NavLink></LoginLink></li>
             <li><LoginLink><NavLink><a>Hi Raju</a></NavLink></LoginLink></li>
             <li><LoginLink><NavLink><a onClick={logOut}>Logout</a></NavLink></LoginLink></li>
           </ul>
