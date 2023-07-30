@@ -15,6 +15,7 @@ import { login, logout, selectUser } from './features/userSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase/config';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 

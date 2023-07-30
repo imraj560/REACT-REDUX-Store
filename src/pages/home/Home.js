@@ -1,10 +1,4 @@
 import React from 'react';
-import { useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
-// import { APIKey } from '../../common/movieApiKey';
-// import movieApi from '../../common/movieApi';
-
-import AuthComponent from '../../component/authNav/AuthComponent';
 import './Home.css';
 
 export const Home = () => {
