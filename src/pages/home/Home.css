@@ -2,23 +2,24 @@
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-image: url('../../../public/react_movie.jpg');
+    background-image: url('../../../public/monsters.jpg');
     background-size: cover;
     background-repeat:no-repeat;
-    background-position: center center;
+    background-position: center top;
 }
 
 .text_div{
 
     position: absolute;
-    margin: 0 auto 0 auto;
-    right: 0;
-    left: 0;
+    /* margin: 0 auto 0 auto; */
+    padding-left:30px;
+    /* right: 0;
+    left: 0; */
     top:30%;
     width: 1000px;
     height: 250px;
     /* background-color: red; */
-    text-align: center;
+    /* text-align: center; */
     font-size: 60px;
     color: black;
     /* font-weight: bold; */
@@ -26,7 +27,7 @@
 
 .text_div > p:nth-child(2){
 
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .text_div > button{

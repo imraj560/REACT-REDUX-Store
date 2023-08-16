@@ -8,8 +8,8 @@ export const Home = () => {
       <div className='home__container'>
 
           <div className='text_div'>
-            <p>Amazing Content</p>
-            <p>Welcome to our Store</p>
+            <p>Monsters Inc By Disney</p>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected</p>
            
           </div>
       

@@ -67,7 +67,7 @@ function App() {
 
      
           
-        <Footer/>
+        
       
      
       </BrowserRouter>
