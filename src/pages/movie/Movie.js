@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './Movie.css';
+import Layout from '../../component/layout/layout';
 
 
 const Movie = () => {
@@ -130,9 +131,9 @@ useEffect(()=>{
 
   return (
 
-   
-   
-    <Row style={{width:"100%", padding:"0", margin:"0px 50px 5px 5px", marginBottom:"50px"}}>
+   <Layout>
+
+        <Row style={{width:"100%", padding:"0", margin:"0px 50px 5px 5px", marginBottom:"50px"}}>
 
       <div className='banner'>
 
@@ -194,6 +195,9 @@ useEffect(()=>{
     
 
   </Row>
+   </Layout>
+   
+
 
 
 

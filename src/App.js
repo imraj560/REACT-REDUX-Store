@@ -16,6 +16,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase/config';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import AuthComponent from './component/authNav/AuthComponent';
 
 
 
@@ -49,20 +50,21 @@ function App() {
   },[])
 
   return (
-    <div className="App" style={{ width:'100%' }}>
+    <div className="App">
       
       <BrowserRouter>
      
         <ToastContainer/>
-       
-        <Header/>
         
           <Routes>       
               <Route path="/" element={<Home/>}/>
               <Route path="/login" element={<Login/>}/>
               <Route path="/register" element={<Register/>}/>
-              <Route path="/movie" element={<Movie/>}/>
-              <Route path="/cart" element={<Cart/>}/>
+              <Route element={<AuthComponent/>}>
+                <Route path="/movie" element={<Movie/>}/>
+                <Route path="/cart" element={<Cart/>}/>
+              </Route>
+              
           </Routes>
 
      
