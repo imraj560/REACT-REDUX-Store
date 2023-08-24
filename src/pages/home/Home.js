@@ -1,11 +1,13 @@
 import React from 'react';
+import Layout from '../../component/layout/layout';
 import './Home.css';
 
 export const Home = () => {
 
   return (
-  
-      <div className='home__container'>
+
+      <Layout>
+         <div className='home__container'>
 
           <div className='text_div'>
             <p>Monsters Inc By Disney</p>
@@ -15,6 +17,8 @@ export const Home = () => {
       
         
       </div>
+      </Layout>
+     
    
   )
 }

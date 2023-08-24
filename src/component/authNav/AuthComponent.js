@@ -1,7 +1,9 @@
-import React from 'react'
+
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Outlet } from 'react-router-dom';
 import { selectUser } from '../../features/userSlice';
+import Login from '../../pages/login/Login';
+import { toast} from 'react-toastify';
 
 const AuthComponent = ({children}) => {
 
@@ -10,11 +12,14 @@ const AuthComponent = ({children}) => {
 
     if(user){
 
-        return children;
+        return <Outlet/>
 
     }else{
 
-        navigate('/login');
+       
+        return <Login/>;
+        
+            
     }
 }
 
