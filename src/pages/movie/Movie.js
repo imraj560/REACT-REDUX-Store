@@ -21,24 +21,40 @@ const Movie = () => {
  //this is where i get the api data using fetch 
   useEffect(()=>{
     
+    // fetch('utils/data.json').then((response)=>{
 
-    fetch('utils/data.json').then((response)=>{
+    //     return response.json();
+
+    // }).then((api_data)=>{
+
+    // setMovies(api_data);
+     
+
+    // })
+    // .then((err)=>{
+
+    //     console.log(err, "logging error");
+      
+    // });
+
+    const asyncFunction = async() => {
+
+      let data = await fetch('https://dummyjson.com/products').then((response)=>{
 
         return response.json();
 
-    }).then((api_data)=>{
+      }).then((data)=>{
 
-    setMovies(api_data);
-     
+          setMovies(data.products);
 
-    })
-    .then((err)=>{
+      })
+    }
 
-        console.log(err, "logging error");
-      
-    });
+    asyncFunction();
 
   },[]);
+
+  console.log(movies);
 
 //SEARCH FUNCTION STARTS FROM THERE
 
@@ -97,6 +113,7 @@ useEffect(() => {
   setFilterMovie(newCheckedMovie);
 }, [movies, filterTags]);
 
+
 //on range change filter starts from here
 
 function onRangeChange(event){
@@ -151,21 +168,25 @@ useEffect(()=>{
 
       <label style={{fontWeight:"600", fontSize:"18px", marginBottom:"20px"}}>Sort Movies</label>
       <div class="form-check">
-      <input type="checkbox" class="form-check-input" value='action' onChange={onCheckChange}/>
-      <label class="form-check-label" for="exampleCheck1">Action</label>
+      <input type="checkbox" class="form-check-input" value='fragrance' onChange={onCheckChange}/>
+      <label class="form-check-label" for="exampleCheck1">Fragrance</label>
       </div>
       <div class="form-check">
-      <input type="checkbox" class="form-check-input" value="amination" onChange={onCheckChange}/>
-      <label class="form-check-label" for="exampleCheck1">Animation</label>
+      <input type="checkbox" class="form-check-input" value="smartphones" onChange={onCheckChange}/>
+      <label class="form-check-label" for="exampleCheck1">Smartphones</label>
       </div>
       <div class="form-check">
-      <input type="checkbox" class="form-check-input" value="adventure" onChange={onCheckChange}/>
-      <label style={{marginBottom:"30px"}} class="form-check-label" for="exampleCheck1">Adventure</label>
+      <input type="checkbox" class="form-check-input" value="laptops" onChange={onCheckChange}/>
+      <label class="form-check-label" for="exampleCheck1">Laptops</label>
+      </div>
+      <div class="form-check">
+      <input type="checkbox" class="form-check-input" value="home-decoration" onChange={onCheckChange}/>
+      <label style={{marginBottom:"30px"}} class="form-check-label" for="exampleCheck1">Home decoration</label>
       </div>
 
       <label for="customRange1" class="form-label" style={{fontWeight:"600", fontSize:"18px", marginTop:"20px", marginBottom:"20px"}}>Price Range(min To max)</label>
 
-      <input type="range" value={rangeField} class="form-range" min={0} max={300} step={50} id="customRange1" onChange={onRangeChange}></input>
+      <input type="range" value={rangeField} class="form-range" min={0} max={1500} step={100} id="customRange1" onChange={onRangeChange}></input>
       <span>0</span>-<span style={{marginBottom:"35px"}}>{rangeField}</span>
 
       </Col>
@@ -178,7 +199,7 @@ useEffect(()=>{
 
           filteredMovie.map((movies)=>(
             
-            <Col lg={4} md={4} sm={4} xs={4} style={{marginBottom:"10px"}}>
+            <Col lg={4} md={6} sm={6} xs={6} style={{marginBottom:"10px"}}>
             <MovieCard movieProp={movies} />
             </Col>
             

@@ -1,14 +1,18 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
 import { auth } from '../../firebase/config';
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { signOut } from 'firebase/auth';
 import { logout } from '../../features/userSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import LoginLink from '../authNav/LoginLink';
 import LogoutLink from '../authNav/LogoutLink';
-import './Header.css';
+//import './Header.css';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import logo from '../../assets/images/logo.png';
+import { Cart } from 'react-bootstrap-icons';
 
 const Header = () => {
 
@@ -52,24 +56,34 @@ const Header = () => {
 
 
   return (
-    <header>
-       <div className='logo'><NavLink to="/">Logo</NavLink></div>
-       <div className='hamburger' onClick={toggleClass}>
-          <div className='line'></div>
-          <div className='line'></div>
-          <div className='line'></div>
-       </div>
-
-       <nav className='nav-bar'>
-          <ul>
-            <li><LogoutLink><NavLink to="/login"><a>Login</a></NavLink></LogoutLink></li>
-            <li><LoginLink><NavLink to="/movie"><a>Movies</a></NavLink></LoginLink></li>
-            <li><LoginLink><NavLink to="/cart"><a>Cart&nbsp;:{totalQty}</a></NavLink></LoginLink></li>
-            <li><LoginLink><NavLink><a>Hi Raju</a></NavLink></LoginLink></li>
-            <li><LoginLink><NavLink><a onClick={logOut}>Logout</a></NavLink></LoginLink></li>
-          </ul>
-       </nav>
-    </header>
+    <>
+  
+  <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+      <Container>
+        <Navbar.Brand href="#home"><NavLink to={'/'}><img src={logo} width={45} height={40} /></NavLink></Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+           
+          </Nav>
+          <Nav>
+            <LoginLink>
+              <Nav.Link href="#deets"><NavLink to={'/cart'}><Cart size={25} color='black'/></NavLink><span style={{fontSize:'18px', fontWeight:'bold'}}>{totalQty}</span></Nav.Link>
+              <Nav.Link><NavLink to={'/movie'} style={{textDecoration:"none", color:"black",fontWeight:"bold"}}>Store</NavLink></Nav.Link>
+              <Nav.Link href="#deets"><span onClick={logOut} style={{fontWeight:"bold",color:"black"}}>Logout</span></Nav.Link>
+              
+            </LoginLink>
+          
+            <LogoutLink>
+              <Nav.Link href="#deets"><span style={{fontWeight:"bold"}}><NavLink to={'/login'}>LogIn</NavLink></span></Nav.Link>
+            </LogoutLink>
+            
+           
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+    </>
   )
 }
 

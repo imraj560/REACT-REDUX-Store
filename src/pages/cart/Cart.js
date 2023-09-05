@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { removeCartItem, incrementQuantity, decrementQuantity} from '../../features/cartSlice';
+import Layout from '../../component/layout/layout';
 import './Cart.css';
 
 const Cart = () => {
@@ -35,7 +36,8 @@ const Cart = () => {
 
 
   return (
-    <div className='row'>
+    <Layout>
+      <div className='row'>
 
         <div className='cartContainer'>
             <h3>Your order list is here</h3>
@@ -107,6 +109,8 @@ const Cart = () => {
         </div>
 
     </div>
+    </Layout>
+    
   )
 }
 

@@ -1,47 +1,110 @@
-.home__container{
+.home__banner{
+
     position: relative;
-    height: 100vh;
     width: 100vw;
-    background-image: url('../../../public/monsters.jpg');
+    min-height: 60vh!important;
+    background-color: red;
+    background-image: url('../../assets/images/shop.jpeg');
     background-size: cover;
     background-repeat:no-repeat;
-    background-position: center top;
+    background-position: center right;
 }
 
-.text_div{
+.banner__text{
+    position: absolute;
+    top:30%;
+    height: 150px;
+    padding: 0px 0px 0px 30px!important;
+    /* background-color: red; */
+}
+
+.banner__text > p{
+
+    font-size: 40px;
+}
+
+.service__section{
+
+    /* background-color: green; */
+    min-height: 35vh!important;
+    text-align: center;
+    padding: 30px 100px;
+}
+
+
+
+.electronics__section{
+
+    /* background-color: green; */
+    min-height: 35vh!important;
+    text-align: left;
+    padding: 30px 20px;
+}
+
+.electronics__section > h3{
+
+    margin-bottom: 30px;
+}
+
+.parallex{
+
+    min-height: 400px!important;
+    background-color:red;
+    background-image: url('../../assets/images/parallex.jpg');
+    background-size: cover;
+    background-position:center right;
+    background-attachment: fixed;
+
+}
+
+.parallex > p{
+
+    font-size: 50px;
+    line-height: 400px;
+    text-align: center;
+}
+
+
+.parallex__second{
+
+    position: relative;
+    min-height: 600px!important;
+    background-color:red;
+    background-image: url('../../assets/images/banner2.jpg');
+    background-size: cover;
+    background-position:center top;
+    padding:0px 20px;
+    /* background-attachment: fixed; */
+
+}
+
+.textbox__second{
 
     position: absolute;
-    /* margin: 0 auto 0 auto; */
-    padding-left:30px;
-    /* right: 0;
-    left: 0; */
-    top:30%;
-    width: 1000px;
-    height: 250px;
+    top: 40%;
+    min-height: 200px;
     /* background-color: red; */
-    /* text-align: center; */
-    font-size: 60px;
-    color: black;
-    /* font-weight: bold; */
+
 }
 
-.text_div > p:nth-child(2){
+.textbox__second > p{
 
-    font-size: 20px;
+    color:white;
+    font-size: 50px;
+    text-align: left;
 }
 
-.text_div > button{
 
-    width: 250px;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: 0.2s;
-}
 
-button:hover{
 
-    transform: scale(1.08);
-}
+
+
+
+
+
+
+
+
 
 
 

@@ -1,26 +1,47 @@
 import React from 'react';
 import './MovieCard.css';
+import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../../features/userSlice';
 import { addToCart } from '../../features/cartSlice';
+import { toast} from 'react-toastify';
 
 const MovieCard = ({movieProp}) => {
 
   const dispatch = useDispatch();
+  const user = useSelector(selectUser);
 
-  const {id,title,price,image} = movieProp;
+  const {id,title,price,thumbnail} = movieProp;
+
+  const cartVerification = ()=>{
+
+    if(user){
+
+      dispatch(addToCart(id,title,thumbnail,price));
+
+    }else{
+
+      toast.warning("Please Login");
+
+    }
+
+  }
 
   return (
 
-          <Card style={{ width: '100%' }}>
-          <Card.Img variant="top" src={image} />
+          <Card style={{ width: '100%'}}>
+             <NavLink to={`/productView/${id}`}> {/**Reminder: you have to use back ticks in template literals */}
+               <Card.Img variant="top" src={thumbnail} style={{height:"400px"}} />
+            </NavLink>  
           <Card.Body>
             <Card.Title>{title}</Card.Title>
             <Card.Text>
              {price}
             </Card.Text>
-            <Button variant="success"  onClick={()=>dispatch(addToCart({id,title,image,price}))}>Add To Cart</Button>
+            <Button variant="secondary"  onClick={cartVerification}>Add To Cart</Button>
           </Card.Body>
         </Card>
 
