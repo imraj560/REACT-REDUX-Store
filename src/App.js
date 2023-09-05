@@ -17,6 +17,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase/config';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AuthComponent from './component/authNav/AuthComponent';
+import ProductView from './pages/product/ProductView';
 
 
 
@@ -60,6 +61,7 @@ function App() {
               <Route path="/" element={<Home/>}/>
               <Route path="/login" element={<Login/>}/>
               <Route path="/register" element={<Register/>}/>
+              <Route path="/productview/:id" element={<ProductView/>}/>
               <Route element={<AuthComponent/>}>
                 <Route path="/movie" element={<Movie/>}/>
                 <Route path="/cart" element={<Cart/>}/>

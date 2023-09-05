@@ -1,0 +1,20 @@
+.view__banner{
+
+    min-height: 20vh!important;
+    background-color:#f1f1f1;
+}
+
+.view__banner > p{
+
+    columns: black;
+    font-size: 30px;
+    line-height: 20vh;
+    text-align: center;
+}
+
+.details{
+
+    /* background-color: red; */
+    padding: 20px 350px;
+}
+
