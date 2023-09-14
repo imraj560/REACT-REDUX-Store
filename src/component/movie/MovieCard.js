@@ -11,16 +11,19 @@ import { toast} from 'react-toastify';
 
 const MovieCard = ({movieProp}) => {
 
+
+  const {id,title,price,thumbnail, description} = movieProp;
+  
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
 
-  const {id,title,price,thumbnail} = movieProp;
+  
 
   const cartVerification = ()=>{
 
     if(user){
 
-      dispatch(addToCart(id,title,thumbnail,price));
+      dispatch(addToCart({id,title,price,thumbnail,description}));
 
     }else{
 
@@ -38,6 +41,7 @@ const MovieCard = ({movieProp}) => {
             </NavLink>  
           <Card.Body>
             <Card.Title>{title}</Card.Title>
+            {description}
             <Card.Text>
              {price}
             </Card.Text>

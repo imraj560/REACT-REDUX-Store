@@ -3,6 +3,8 @@ import MovieCard from '../../component/movie/MovieCard';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Card from 'react-bootstrap/Card'
+import { Funnel } from 'react-bootstrap-icons';
 import './Movie.css';
 import Layout from '../../component/layout/layout';
 
@@ -14,8 +16,6 @@ const Movie = () => {
  const [rangeField, setRangeField] = useState(0);
  const [filterTags, setFilterTags] = useState([]);//filter tag is an array since we can check multiple chekcboxes at ones
  const [filteredMovie, setFilterMovie] = useState(movies);
-//  const [checkbox, setCheckBox] = useState(['action','amination','adventure']);
- const idRef = useRef(['action','animation','adventure']);
 
 
  //this is where i get the api data using fetch 
@@ -160,13 +160,15 @@ useEffect(()=>{
 
       <Col md={2}>
 
-       <p>Filter Your Search</p> 
-      <label for="basic-url" style={{fontWeight:"600", fontSize:"18px", marginBottom:"20px"}}>Search Movies</label>
+      <Card style={{marginBottom:"20px"}}>
+        <Card.Header style={{backgroundColor:"black", color:"white"}}>Filter Products <Funnel size={20}/> </Card.Header>
+        <Card.Body>
+      <label for="basic-url" style={{fontWeight:"600", fontSize:"18px", marginBottom:"20px"}}>Search Products</label>
       <div class="input-group mb-3" >
-        <input  onChange = {onSearchChange} style={{marginBottom:"30px"}} type="text" class="form-control" id="search-box" aria-describedby="basic-addon3" />
+        <input placeholder='search a product'  onChange = {onSearchChange} style={{marginBottom:"30px"}} type="text" class="form-control" id="search-box" aria-describedby="basic-addon3" />
       </div>
 
-      <label style={{fontWeight:"600", fontSize:"18px", marginBottom:"20px"}}>Sort Movies</label>
+      <label style={{fontWeight:"600", fontSize:"18px", marginBottom:"20px"}}>Sort Products</label>
       <div class="form-check">
       <input type="checkbox" class="form-check-input" value='fragrance' onChange={onCheckChange}/>
       <label class="form-check-label" for="exampleCheck1">Fragrance</label>
@@ -188,6 +190,9 @@ useEffect(()=>{
 
       <input type="range" value={rangeField} class="form-range" min={0} max={1500} step={100} id="customRange1" onChange={onRangeChange}></input>
       <span>0</span>-<span style={{marginBottom:"35px"}}>{rangeField}</span>
+
+        </Card.Body>
+      </Card>
 
       </Col>
 

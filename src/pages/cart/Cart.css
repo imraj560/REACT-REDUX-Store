@@ -1,19 +1,11 @@
-.row{
 
-    position: relative;
-    width: 100vw;
-    min-height: 800px;
-    /* background-color: red; */
-}
 
 .cartContainer{
-    position: absolute;
-    width: 70%;
-    min-height: 100px;
-    margin: 70px auto;
-    left: 0;
-    right: 0;
-    /* background-color: gray; */
+   
+    /* background-color: red; */
+    width: 60vw!important;
+    margin: auto;
+    margin-top:100px!important;
 }
 
 .cartContainer h3{
@@ -28,6 +20,8 @@
     padding: 7px;
     font-size:18px;
     cursor: pointer;
+    background-color: white;
+    border: none;
 }
 
 .quantity{
@@ -57,4 +51,18 @@
     background-color: black;
     color: white;
     border: 1px solid white;
+}
+
+.cart__banner{
+
+    min-height: 20vh!important;
+    background-color:#f5f0f0;
+    text-align: center;
+}
+
+.cart__banner > p{
+
+    color:black;
+    font-size: 25px;
+    line-height: 20vh;
 }

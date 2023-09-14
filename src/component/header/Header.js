@@ -13,6 +13,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../assets/images/logo.png';
 import { Cart } from 'react-bootstrap-icons';
+import { Unlock } from 'react-bootstrap-icons';
 
 const Header = () => {
 
@@ -75,7 +76,7 @@ const Header = () => {
             </LoginLink>
           
             <LogoutLink>
-              <Nav.Link href="#deets"><span style={{fontWeight:"bold"}}><NavLink to={'/login'}>LogIn</NavLink></span></Nav.Link>
+              <Nav.Link href="#deets"><span style={{fontWeight:"bold"}}><NavLink to={'/login'}><Unlock color='black' size={32}/></NavLink></span></Nav.Link>
             </LogoutLink>
             
            

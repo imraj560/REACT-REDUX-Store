@@ -1,13 +1,17 @@
 import React, { useState } from 'react'
+import  Row  from 'react-bootstrap/Row';
+import Table from 'react-bootstrap/Table';
+import { Button } from 'react-bootstrap';
+import { Trash } from 'react-bootstrap-icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeCartItem, incrementQuantity, decrementQuantity} from '../../features/cartSlice';
 import Layout from '../../component/layout/layout';
+import PaypalButton from '../../component/paypal/PaypalButton';
 import './Cart.css';
 
 const Cart = () => {
 
     const dispatch = useDispatch();
-
     const cartItem = useSelector((state) => state.cart.cart);
 
     const quantityTotal = ()=>{
@@ -29,20 +33,29 @@ const Cart = () => {
         avg += item.quantity * item.price;
 
       })
-
-      return avg.toFixed(3);
-
+      
+      return avg.toFixed(3); 
+      
     }
+  
+    avgTotal();
+
+    const priceDetail = {"price":avg};
+
+    
+
 
 
   return (
     <Layout>
-      <div className='row'>
+      <Row>
+
+        <Row className='cart__banner g-0'>
+          <p>Cart Items</p>
+        </Row>
 
         <div className='cartContainer'>
-            <h3>Your order list is here</h3>
-
-            <table id='cartTable'>
+            <Table stripped>
               <thead>
                 <tr>
                   <th>Name</th>
@@ -71,12 +84,12 @@ const Cart = () => {
                         <td>{data.price}</td>
                         <td>
                             <button className='quantity' onClick={()=>dispatch(incrementQuantity(data.id))}>+</button>
-                            {data.quantity}
+                            <span style={{padding:"10px"}}>{data.quantity}</span>
                             <button className='quantity' onClick={()=>dispatch(decrementQuantity(data.id))}>-</button>
                         </td>
                         <td>{qtyPrice()}</td>
                         <td>
-                          <button className='delete' onClick={()=>dispatch(removeCartItem(data.id))}>x</button>
+                          <button className='delete' onClick={()=>dispatch(removeCartItem(data.id))}> <Trash color='black' size={22}/></button>
                         </td>
 
                       </tr>
@@ -94,12 +107,24 @@ const Cart = () => {
                   <td>{quantityTotal()}</td>
 
                   <td colSpan={3}>Total Price</td>
-                  <td>{avgTotal()}</td>
+                  <td>{avg}</td>
+                
+                </tr>
+
+                 <tr>
+
+                  <td id='paypal' colSpan={6} style={{padding:"20px"}}>
+
+                    <h5>Select your Payment option</h5>
+
+                    <PaypalButton props={priceDetail}/>
+
+                  </td>
                 
                 </tr>
               </tfooter>
 
-            </table>
+            </Table>
             
 
              
@@ -108,7 +133,7 @@ const Cart = () => {
           
         </div>
 
-    </div>
+    </Row>
     </Layout>
     
   )
