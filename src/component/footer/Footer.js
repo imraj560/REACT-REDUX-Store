@@ -5,7 +5,7 @@ const Footer = ()=>{
 
     return(
 
-      <footer>
+      <footer style={{textAlign:"center", paddingTop:"10px"}}>
         <p>Copyrights Raju Ahmed @ 2023</p>
       </footer>
     )

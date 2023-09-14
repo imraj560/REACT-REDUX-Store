@@ -8,6 +8,7 @@ import Home from './pages/home/Home';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Movie from './pages/movie/Movie';
+import Thankyou from './pages/thankyou/Thankyou';
 import Cart from './pages/cart/Cart';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -18,6 +19,7 @@ import { auth } from './firebase/config';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AuthComponent from './component/authNav/AuthComponent';
 import ProductView from './pages/product/ProductView';
+import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 
 
 
@@ -52,7 +54,9 @@ function App() {
 
   return (
     <div className="App">
-      
+      <PayPalScriptProvider options={{"client-id":process.env.REACT_APP_PAYPAL_CLIENT_ID}}>
+
+     
       <BrowserRouter>
      
         <ToastContainer/>
@@ -65,6 +69,7 @@ function App() {
               <Route element={<AuthComponent/>}>
                 <Route path="/movie" element={<Movie/>}/>
                 <Route path="/cart" element={<Cart/>}/>
+                <Route path="/thankyou" element={<Thankyou/>}/>
               </Route>
               
           </Routes>
@@ -75,6 +80,8 @@ function App() {
       
      
       </BrowserRouter>
+
+      </PayPalScriptProvider>
      
     </div>
   );

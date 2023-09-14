@@ -1,0 +1,12 @@
+.thankyou__banner{
+
+    min-height: 200px!important;
+    background-color:#f5f0f0;
+    text-align: center;
+}
+
+.thankyou__banner > p{
+
+    line-height: 200px;
+    font-size: 40px;
+}
