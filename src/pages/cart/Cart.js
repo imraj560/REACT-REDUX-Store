@@ -113,7 +113,7 @@ const Cart = () => {
 
                  <tr>
 
-                  <td id='paypal' colSpan={6} style={{padding:"20px"}}>
+                  <td colSpan={6} style={{padding:"20px"}}>
 
                     <h5>Select your Payment option</h5>
 
