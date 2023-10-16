@@ -55,7 +55,7 @@ const Cart = () => {
         </Row>
 
         <div className='cartContainer'>
-            <Table stripped>
+            <Table responsive="sm">
               <thead>
                 <tr>
                   <th>Name</th>
