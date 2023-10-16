@@ -18,3 +18,12 @@
     padding: 20px 350px;
 }
 
+@media only screen and (max-width:1300px) {
+
+    .details{
+
+        padding: 20px 100px;
+        margin-bottom: 40px;
+    }
+}
+
