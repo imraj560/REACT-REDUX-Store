@@ -48,7 +48,7 @@ const Login = () => {
         const user = userCredential.user;
         console.log(user);
         
-        toast.success('Success Notification !', {
+        toast.success('Successfully Logged In !', {
           position: toast.POSITION.TOP_RIGHT
       });
         navigate('/movie');
