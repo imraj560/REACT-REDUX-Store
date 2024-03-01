@@ -65,22 +65,25 @@ const Login = () => {
   }
 
   return (
-    <div className='login__div'>
-      <h2>Login </h2>
-      <form>
-       
-        <input type="email" name="email" value={email} placeholder='please type your email'
-        onChange={(e)=>setEmail(e.target.value)}
-        />
-       
-        <input type="password" name="password" value={password} placeholder='please type your password'
-        onChange={(e)=>setPassword(e.target.value)}
-        />
+    <div className='login_div'>
+      <div className='formContainer'>
+         <h2>Login </h2>
+        <form>
+        
+          <input type="email" name="email" value={email} placeholder='please type your email'
+          onChange={(e)=>setEmail(e.target.value)}
+          />
+        
+          <input type="password" name="password" value={password} placeholder='please type your password'
+          onChange={(e)=>setPassword(e.target.value)}
+          />
 
-        <button className='login__button' onClick={login}>Sign In</button>
-      </form>
+          <button className='login__button' onClick={login}>Sign In</button>
+        </form>
 
-      <h5>No Account? <NavLink to="/register"><span className='register__title'>Register</span></NavLink></h5>
+        <h5>No Account? <NavLink to="/register" style={{textDecoration:'none', color:"black"}}><span className='register__title'>Register</span></NavLink></h5>
+      </div>
+     
 
     </div>
   )

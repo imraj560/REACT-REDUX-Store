@@ -51,9 +51,9 @@ const Register = () => {
    
 
     return (
-        <div className='login__div'>
-            <ToastContainer/>
-          <h2>Register </h2>
+        <div className='register_div'>
+           <div className='registerformContainer'>
+            <h2>Register </h2>
           <form>
            
             <input type="email" name="email" value={email} placeholder='please type your email'
@@ -71,7 +71,10 @@ const Register = () => {
             <button className='login__button' onClick={signUp}>Register</button>
           </form>
     
-          <h5>Already Registered? <NavLink to="/login"><span className='register__title'>Login</span></NavLink></h5>
+          <h5>Already Registered? <NavLink to="/login" style={{textDecoration:'none', color:'green'}}><span className='register__title'>Login</span></NavLink></h5>
+           </div>
+            
+          
          
     
         </div>

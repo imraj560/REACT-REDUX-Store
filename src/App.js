@@ -10,8 +10,6 @@ import Register from './pages/register/Register';
 import Movie from './pages/movie/Movie';
 import Thankyou from './pages/thankyou/Thankyou';
 import Cart from './pages/cart/Cart';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { login, logout, selectUser } from './features/userSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { onAuthStateChanged } from 'firebase/auth';
@@ -59,8 +57,6 @@ function App() {
      
       <BrowserRouter>
      
-        <ToastContainer/>
-        
           <Routes>       
               <Route path="/" element={<Home/>}/>
               <Route path="/login" element={<Login/>}/>
