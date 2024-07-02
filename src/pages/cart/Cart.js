@@ -3,6 +3,7 @@ import  Row  from 'react-bootstrap/Row';
 import Table from 'react-bootstrap/Table';
 import { Button } from 'react-bootstrap';
 import { Trash } from 'react-bootstrap-icons';
+import Container from 'react-bootstrap/Container';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeCartItem, incrementQuantity, decrementQuantity} from '../../features/cartSlice';
 import Layout from '../../component/layout/layout';
@@ -48,14 +49,17 @@ const Cart = () => {
 
   return (
     <Layout>
-      <Row>
+
+      <Container>
+
+        <Row>
 
         <Row className='cart__banner g-0'>
           <p>Cart Items</p>
         </Row>
 
         <div className='cartContainer'>
-            <Table responsive="sm">
+            <Table responsive>
               <thead>
                 <tr>
                   <th>Name</th>
@@ -107,7 +111,7 @@ const Cart = () => {
                   <td>{quantityTotal()}</td>
 
                   <td colSpan={3}>Total Price</td>
-                  <td>{avg}</td>
+                  <td>{avg.toFixed(3)}</td>
                 
                 </tr>
 
@@ -134,6 +138,8 @@ const Cart = () => {
         </div>
 
     </Row>
+      </Container>
+      
     </Layout>
     
   )
