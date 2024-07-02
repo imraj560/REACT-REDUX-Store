@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Row } from "react-bootstrap";
+import { Row, Container } from "react-bootstrap";
 import Col from 'react-bootstrap/Col';
 import {Button} from "react-bootstrap";
 import { Card } from "react-bootstrap";
@@ -50,9 +50,11 @@ const ProductView = () => {
 
         </Row>
 
-        <Row className="details g-0">
+        <Container>
 
-          <Col lg={6} style={{padding:"20px"}}>
+          <Row id="productDiv">
+
+          <Col lg={6} >
           <h3>Description</h3><br></br>
           <h5>{pdata.title}</h5>
           <p>
@@ -63,15 +65,14 @@ const ProductView = () => {
           
           <Col lg={6}>
           
-          
+          <MovieCard movieProp={pdata} />
 
-           <MovieCard movieProp={pdata} />
-
-          
-          
           </Col>
 
         </Row>
+      </Container>
+
+        
 
         
 
