@@ -1,22 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../../component/layout/layout';
-import { Button } from 'react-bootstrap';
+import { Button, Nav } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import './Home.css';
 import { Paypal } from 'react-bootstrap-icons';
 import { CreditCard } from 'react-bootstrap-icons';
 import { Truck } from 'react-bootstrap-icons';
 import { NavLink } from 'react-router-dom';
 import ProductViewCard from '../../component/productpage/ProductViewCard';
+import './Home.css';
 
 export const Home = () => {
 
   const [products, setProducts] = useState([]);
-  const [mobile, setMobile] = useState([]);
+  const [groceries, setgroceries] = useState([]);
   const [fragrance, setFragrance] = useState([]);
-  const [skincare, setSkincare] = useState([]);
+  const [beauty, setBeauty] = useState([]);
+  const [furniture, setFurniture] = useState([]);
 
  
   {/**Getting the API Data */}
@@ -46,13 +47,15 @@ export const Home = () => {
   {/**Taking the first 3 items from array */}
  useEffect(()=>{
 
-  const mobileData = products.filter((product)=>{
+  const groceriesData = products.filter((product)=>{
     
-  return product.category.toLowerCase().includes('smartphones');
+  return product.category.toLowerCase().includes('groceries');
 
   })
 
-  setMobile(mobileData.slice(0 ,4));
+
+
+  setgroceries(groceriesData.slice(0 ,4));
 
   const fragranceData = products.filter((product)=>{
     
@@ -63,13 +66,22 @@ export const Home = () => {
     setFragrance(fragranceData.slice(0 ,4));
 
 
-    const skincareData = products.filter((product)=>{
+    const beautyData = products.filter((product)=>{
     
-      return product.category.toLowerCase().includes('skincare');
+      return product.category.toLowerCase().includes('beauty');
     
       })
     
-      setSkincare(skincareData.slice(0 ,4));
+      setBeauty(beautyData.slice(0 ,4));
+
+
+      const furnitureData = products.filter((product)=>{
+    
+        return product.category.toLowerCase().includes('furniture');
+      
+        })
+      
+        setFurniture(furnitureData.slice(0 ,4));
 
 
 
@@ -83,132 +95,128 @@ export const Home = () => {
 
   return (
 
-      <Layout>
-      
-       <Row className='home__banner g-0'>
-        <div className='banner__text'>
-          <p>Quality products with affordable prices<br/> Check our Store</p>
-          <Button variant='secondary' style={{width:"120px", borderRadius:"3px"}}><NavLink to='/movie' style={{textDecoration:"none",color:"white"}}>Store</NavLink></Button>
-        </div>
-       </Row>
+    <Layout>
 
-       
+      <Container>
+      <Row>
+        <Col id="home_banner" lg={12} md={12} sm={12} xs={12}>
+          <h2>We provide fresh products delivered to your door step</h2>
+        </Col>
+      </Row>
 
-        <Row className='service__section'>
+      <Row className='service__section text-center mt-5'>
 
-          <h3>Services</h3>
+        <h2 className='mb-5'>Services</h2>
 
-          <Col  lg={4} md={12} sm={12} xs={12}>
-          <Paypal size={40}/>
+          <Col  lg={4} md={12} sm={12} xs={12} className='text-center p-5'>
+          <Paypal size={30}/>
           <p>Paypal Instant Payment</p>
           </Col>
-          <Col  lg={4} md={12} sm={12} xs={12}>
-          <CreditCard size={40}/>
+          <Col  lg={4} md={12} sm={12} xs={12} className='text-center p-5'>
+          <CreditCard size={30}/>
           <p>Pay through Credit Card</p>
           </Col>
-          <Col  lg={4} md={12} sm={12} xs={12}>
-          <Truck size={40}/>
+          <Col  lg={4} md={12} sm={12} xs={12} className='text-center p-5'>
+          <Truck size={30}/>
           <p>Free Shipping</p>
           </Col>
 
-        </Row>
+      </Row>
 
-        <Row className="electronics__section">
+      <Row className="electronics__section mt-5">
 
-          <h3>Mobile Phones</h3>
+        <h3>Groceries and Produce</h3>
 
-              {
-            mobile.map((data)=>(
-            <Col lg={3} md={12} sm={12} xs={12} style={{marginBottom:"20px"}}>   
-            <ProductViewCard props={data} />
-            </Col>
+          {
+          groceries.map((data)=>(
+          <Col lg={3} md={12} sm={12} xs={12} style={{marginBottom:"20px"}}>   
+          <ProductViewCard props={data} />
+          </Col>
 
-            ))
-          }
-          
+          ))
+        }
 
-        
+      </Row>
 
-        </Row>
+      <Row>
+      <Col id="parallex" lg={12} md={12} sm={12} xs={12}>
+          <h2>We provide fresh products delivered to your door step</h2>
+        </Col>
+      </Row>
 
-        <Row className='parallex'>
-          <p>Beautiful and premium accessories</p>
-        </Row>
+      <Row className="electronics__section">
 
+      <h3>Fragrances</h3>
 
-        <Row className="electronics__section">
+          {
 
-          <h3>Fragrances</h3>
+        fragrance.map((data)=>(
+        <Col lg={3} md={12} sm={12} xs={12} style={{marginBottom:"20px"}}>   
+          <ProductViewCard props={data} />
+        </Col>
 
-              {
-          
-            fragrance.map((data)=>(
-            <Col lg={3} md={12} sm={12} xs={12} style={{marginBottom:"20px"}}>   
-              <ProductViewCard props={data} />
-            </Col>
+        ))
+      }
 
-            ))
-          }
-          
+      </Row>
 
-        
+      <Row>
+        <Col id="action_message" lg={3} md={12} sm={12} xs={12}>
+          <h2>For more beauty products please checkout our store</h2>
+          <Button variant='light'><NavLink style={{textDecoration:'none', color:'black'}} to={'/movie'}>Store</NavLink></Button>
+        </Col>
+      </Row>
 
-        </Row>
+      <Row className="electronics__section">
 
-        <Row className='parallex__second'>
+      <h3>Beauty</h3>
 
-         <div className='textbox__second'>
-          <p>Black Friday sales around the corner</p>
-          <Button variant='secondary' style={{width:"150px", backgroundColor:"#3e4449", borderRadius:"3px"}}><NavLink to='/movie' style={{textDecoration:"none",color:"white"}}>Store</NavLink></Button>
+          {
 
-          
-         </div>
-         
-        </Row>
+        beauty.map((data)=>(
+        <Col lg={3} md={12} sm={12} xs={12} style={{marginBottom:"20px"}}>   
+          <ProductViewCard props={data} />
+        </Col>
 
-        
+        ))
+      }
 
-        
-        <Row className="electronics__section">
+      </Row>
 
-          <h3>Skincare</h3>
+      <Row>
 
-              {
-          
-            skincare.map((data)=>(
-            <Col lg={3} md={12} sm={12} xs={12} style={{marginBottom:"20px"}}>   
-              <ProductViewCard props={data} />
-            </Col>
-
-            ))
-          }
-          
-
-        
-
-        </Row>
-
-        
-
-        
-
-       
-
-       
+      <Col id="parallex_second" lg={12} md={12} sm={12} xs={12}>
+          <h2>All your home deco needs</h2>
+        </Col>
+      </Row>
 
 
+
+      <Row className="electronics__section">
+
+      <h3>Furniture</h3>
+
+      {
+
+      furniture.map((data)=>(
+      <Col lg={3} md={12} sm={12} xs={12} style={{marginBottom:"20px"}}>   
+      <ProductViewCard props={data} />
+      </Col>
+
+      ))
+      }
+
+
+
+
+      </Row>
+
+
+    </Container>
       
 
-       
-       
 
-
-   
-
-
-
-
-      </Layout>
+  </Layout>
      
    
   )

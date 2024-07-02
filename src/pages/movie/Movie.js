@@ -174,15 +174,15 @@ useEffect(()=>{
       <label class="form-check-label" for="exampleCheck1">Fragrance</label>
       </div>
       <div class="form-check">
-      <input type="checkbox" class="form-check-input" value="smartphones" onChange={onCheckChange}/>
-      <label class="form-check-label" for="exampleCheck1">Smartphones</label>
+      <input type="checkbox" class="form-check-input" value="groceries" onChange={onCheckChange}/>
+      <label class="form-check-label" for="exampleCheck1">Groceries</label>
       </div>
       <div class="form-check">
-      <input type="checkbox" class="form-check-input" value="laptops" onChange={onCheckChange}/>
-      <label class="form-check-label" for="exampleCheck1">Laptops</label>
+      <input type="checkbox" class="form-check-input" value="beauty" onChange={onCheckChange}/>
+      <label class="form-check-label" for="exampleCheck1">Beauty</label>
       </div>
       <div class="form-check">
-      <input type="checkbox" class="form-check-input" value="home-decoration" onChange={onCheckChange}/>
+      <input type="checkbox" class="form-check-input" value="furniture" onChange={onCheckChange}/>
       <label style={{marginBottom:"30px"}} class="form-check-label" for="exampleCheck1">Home decoration</label>
       </div>
 

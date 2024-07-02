@@ -1,34 +1,24 @@
-.home__banner{
-
-    position: relative;
-    width: 100vw;
-    min-height: 60vh!important;
-    background-color: red;
-    background-image: url('../../assets/images/shop.jpeg');
+#home_banner{
+    width: 100%;
+    min-height: 40vh!important;
+    background-image: url('../../assets/images/banner_home.jpg');
     background-size: cover;
     background-repeat:no-repeat;
-    background-position: center right;
+    background-position: center top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.banner__text{
-    position: absolute;
-    top:30%;
-    height: 150px;
-    padding: 0px 0px 0px 30px!important;
-    /* background-color: red; */
+#home_banner > h2{
+
+    color:white;
+    font-size: 35px;
 }
 
-.banner__text > p{
+.service__section > h2{
 
-    font-size: 40px;
-}
-
-.service__section{
-
-    /* background-color: green; */
-    min-height: 35vh!important;
-    text-align: center;
-    padding: 30px 100px;
+    font-size: 25px;
 }
 
 
@@ -41,64 +31,101 @@
     padding: 30px 20px;
 }
 
-.electronics__section > h3{
+.electronics__section > h2{
 
     margin-bottom: 30px;
+    font-size: 30px;
 }
 
-.parallex{
+
+#action_message{
+
+    height: 100px;
+    width: 100%;
+    background-color: rgb(104, 99, 99);
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#action_message > h2{
+
+    color:white;
+    font-size: 30px;
+}
+
+#parallex{
 
     min-height: 400px!important;
     background-color:red;
-    background-image: url('../../assets/images/parallex.jpg');
+    background-image: url('../../assets/images/parallex_new.jpg');
     background-size: cover;
     background-position:center right;
     background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 
 }
 
-.parallex > p{
-
-    font-size: 50px;
-    line-height: 400px;
-    text-align: center;
-}
 
 
-.parallex__second{
-
-    position: relative;
-    min-height: 600px!important;
-    background-color:red;
-    background-image: url('../../assets/images/banner2.jpg');
-    background-size: cover;
-    background-position:center top;
-    padding:0px 20px;
-    /* background-attachment: fixed; */
-
-}
-
-.textbox__second{
-
-    position: absolute;
-    top: 40%;
-    min-height: 200px;
-    /* background-color: red; */
-
-}
-
-.textbox__second > p{
+#parallex > h2{
 
     color:white;
-    font-size: 50px;
-    text-align: left;
+    font-size: 35px;
 }
+
+#parallex_second{
+
+    min-height: 400px!important;
+    background-color:red;
+    background-image: url('../../assets/images/furniture.jpg');
+    background-size: cover;
+    background-position:center right;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+
+#parallex_second > h2{
+
+    color:white;
+    font-size: 35px;
+}
+
+
+
+
 
 @media only screen and (max-width: 738px){
 
-    .banner__text > p{
+    #home_banner > h2{
 
-        font-size:30px;
+        font-size:17px;
+        font-weight: 600;
+    }
+
+    #action_message > h2{
+
+        color:white;
+        font-size:17px;
+      
+    }
+
+    #parallex > h2{
+
+        color:white;
+        font-size: 17px;
+        font-weight: 600;
     }
 
 }
