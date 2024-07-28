@@ -51,7 +51,7 @@ const Login = () => {
         toast.success('Successfully Logged In !', {
           position: toast.POSITION.TOP_RIGHT
       });
-        navigate('/movie');
+        navigate('/store');
 
         
       })
