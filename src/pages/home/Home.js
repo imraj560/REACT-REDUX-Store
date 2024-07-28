@@ -99,8 +99,11 @@ export const Home = () => {
 
       <Container>
       <Row>
-        <Col id="home_banner" lg={12} md={12} sm={12} xs={12}>
+        <Col style={{display:'flex',flexDirection:'column'}} id="home_banner" lg={12} md={12} sm={12} xs={12}>
           <h2>We provide fresh products delivered to your door step</h2>
+          <Button style={{width:'10%', backgroundColor:'#3b3b3b', border:"none"}}>
+          <NavLink style={{textDecoration:'none', color:'white'}} to={'/store'}>Store</NavLink>
+            </Button>
         </Col>
       </Row>
 
@@ -163,7 +166,7 @@ export const Home = () => {
       <Row>
         <Col id="action_message" lg={3} md={12} sm={12} xs={12}>
           <h2>For more beauty products please checkout our store</h2>
-          <Button variant='light'><NavLink style={{textDecoration:'none', color:'black'}} to={'/movie'}>Store</NavLink></Button>
+          <Button variant='light'><NavLink style={{textDecoration:'none', color:'black'}} to={'/store'}>Store</NavLink></Button>
         </Col>
       </Row>
 

@@ -70,7 +70,7 @@ const Header = () => {
           <Nav>
             <LoginLink>
               <Nav.Link href="#deets"><NavLink to={'/cart'}><Cart size={25} color='black'/></NavLink><span style={{fontSize:'18px', fontWeight:'bold'}}>{totalQty}</span></Nav.Link>
-              <Nav.Link><NavLink to={'/movie'} style={{textDecoration:"none", color:"black",fontWeight:"bold"}}>Store</NavLink></Nav.Link>
+              <Nav.Link><NavLink to={'/store'} style={{textDecoration:"none", color:"black",fontWeight:"bold"}}>Store</NavLink></Nav.Link>
               <Nav.Link href="#deets"><span onClick={logOut} style={{fontWeight:"bold",color:"black"}}>Logout</span></Nav.Link>
               
             </LoginLink>
