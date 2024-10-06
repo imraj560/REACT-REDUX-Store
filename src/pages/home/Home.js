@@ -101,7 +101,7 @@ export const Home = () => {
       <Row>
         <Col style={{display:'flex',flexDirection:'column'}} id="home_banner" lg={12} md={12} sm={12} xs={12}>
           <h2>We provide fresh products delivered to your door step</h2>
-          <Button style={{width:'10%', backgroundColor:'#3b3b3b', border:"none"}}>
+          <Button style={{width:'15%', backgroundColor:'#3b3b3b', border:"none", padding:'9px 9px'}}>
           <NavLink style={{textDecoration:'none', color:'white'}} to={'/store'}>Store</NavLink>
             </Button>
         </Col>

@@ -68,15 +68,16 @@ const Header = () => {
            
           </Nav>
           <Nav>
+          <Nav.Link href="#deets"><NavLink to={'/cart'}><Cart size={25} color='black'/></NavLink><span style={{fontSize:'18px', fontWeight:'bold'}}>{totalQty}</span></Nav.Link>
+          <Nav.Link><NavLink to={'/store'} style={{textDecoration:"none", color:"black",fontWeight:"bold"}}>Store</NavLink></Nav.Link>
             <LoginLink>
-              <Nav.Link href="#deets"><NavLink to={'/cart'}><Cart size={25} color='black'/></NavLink><span style={{fontSize:'18px', fontWeight:'bold'}}>{totalQty}</span></Nav.Link>
-              <Nav.Link><NavLink to={'/store'} style={{textDecoration:"none", color:"black",fontWeight:"bold"}}>Store</NavLink></Nav.Link>
+             
               <Nav.Link href="#deets"><span onClick={logOut} style={{fontWeight:"bold",color:"black"}}>Logout</span></Nav.Link>
               
             </LoginLink>
           
             <LogoutLink>
-              <Nav.Link href="#deets"><span style={{fontWeight:"bold"}}><NavLink to={'/login'}><Unlock color='black' size={32}/></NavLink></span></Nav.Link>
+              <Nav.Link href="#deets"><span ><NavLink style={{fontWeight:"bold", textDecoration:'none', color:'black'}} to={'/login'}>Login</NavLink></span></Nav.Link>
             </LogoutLink>
             
            

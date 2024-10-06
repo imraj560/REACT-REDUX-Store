@@ -190,7 +190,7 @@ useEffect(()=>{
 
       <label for="customRange1" class="form-label" style={{fontWeight:"600", fontSize:"18px", marginTop:"20px", marginBottom:"20px"}}>Price Range(min To max)</label>
 
-      <input type="range" value={rangeField} class="form-range" min={0} max={1500} step={100} id="customRange1" onChange={onRangeChange}></input>
+      <input type="range" value={rangeField} class="form-range" min={0} max={3000} step={5} id="customRange1" onChange={onRangeChange}></input>
       <span>0</span>-<span style={{marginBottom:"35px"}}>{rangeField}</span>
 
         </Card.Body>
