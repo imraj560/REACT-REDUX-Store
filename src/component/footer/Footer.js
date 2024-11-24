@@ -18,7 +18,7 @@ const Footer = ()=>{
             <h4 style={{fontWeight:'600'}}>Pages</h4>
             <ul style={{padding:'0px', lineHeight:'30px'}}>
               <li>Store</li>
-              <li>Products</li>
+              <li>Movies</li>
               <li>About Us</li>
             </ul>
             </Col>

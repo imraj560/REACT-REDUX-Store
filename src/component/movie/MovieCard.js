@@ -12,7 +12,7 @@ import { toast} from 'react-toastify';
 const MovieCard = ({movieProp}) => {
 
 
-  const {id,title,price,thumbnail, description} = movieProp;
+  const {id,title,price,image, description} = movieProp;
   
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
@@ -23,7 +23,7 @@ const MovieCard = ({movieProp}) => {
 
     if(user){
 
-      dispatch(addToCart({id,title,price,thumbnail,description}));
+      dispatch(addToCart({id,title,price,image,description}));
 
     }else{
 
@@ -37,7 +37,7 @@ const MovieCard = ({movieProp}) => {
 
           <Card style={{ width: '100%'}}>
              <NavLink to={`/productView/${id}`}> {/**Reminder: you have to use back ticks in template literals */}
-               <Card.Img variant="top" src={thumbnail} style={{height:"400px"}} />
+               <Card.Img variant="top" src={image} style={{height:"400px"}} />
             </NavLink>  
           <Card.Body>
             <Card.Title>{title}</Card.Title>
