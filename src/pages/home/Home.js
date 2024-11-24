@@ -25,14 +25,16 @@ export const Home = () => {
 
     const asyncFunction = async() =>{
 
-      let data = await fetch('https://dummyjson.com/products').then((response)=>{
+      //let data = await fetch('https://dummyjson.com/products').then((response)=>{
+        let data = await fetch('utils/data.json').then((response)=>{
 
       
         return response.json();
 
       }).then((data)=>{
 
-        setProducts(data.products);
+        setProducts(data);
+        console.log(products)
       })
 
     }
@@ -49,7 +51,7 @@ export const Home = () => {
 
   const groceriesData = products.filter((product)=>{
     
-  return product.category.toLowerCase().includes('groceries');
+  return product.category.toLowerCase().includes('animation');
 
   })
 
@@ -59,7 +61,7 @@ export const Home = () => {
 
   const fragranceData = products.filter((product)=>{
     
-    return product.category.toLowerCase().includes('fragrances');
+    return product.category.toLowerCase().includes('action');
   
     })
   
@@ -68,7 +70,7 @@ export const Home = () => {
 
     const beautyData = products.filter((product)=>{
     
-      return product.category.toLowerCase().includes('beauty');
+      return product.category.toLowerCase().includes('romantic');
     
       })
     
@@ -77,7 +79,7 @@ export const Home = () => {
 
       const furnitureData = products.filter((product)=>{
     
-        return product.category.toLowerCase().includes('furniture');
+        return product.category.toLowerCase().includes('drama');
       
         })
       
@@ -100,7 +102,7 @@ export const Home = () => {
       <Container>
       <Row>
         <Col style={{display:'flex',flexDirection:'column'}} id="home_banner" lg={12} md={12} sm={12} xs={12}>
-          <h2>We provide fresh products delivered to your door step</h2>
+          <h2>Latest Movie Releases</h2>
           <Button style={{width:'15%', backgroundColor:'#3b3b3b', border:"none", padding:'9px 9px'}}>
           <NavLink style={{textDecoration:'none', color:'white'}} to={'/store'}>Store</NavLink>
             </Button>
@@ -128,7 +130,7 @@ export const Home = () => {
 
       <Row className="electronics__section mt-5">
 
-        <h3>Groceries and Produce</h3>
+        <h3>Latest Release</h3>
 
           {
           groceries.map((data)=>(
@@ -143,13 +145,13 @@ export const Home = () => {
 
       <Row>
       <Col id="parallex" lg={12} md={12} sm={12} xs={12}>
-          <h2>We provide fresh products delivered to your door step</h2>
+          <h2>We will notify you of upcoming movies</h2>
         </Col>
       </Row>
 
       <Row className="electronics__section">
 
-      <h3>Fragrances</h3>
+      <h3>Kids and Family</h3>
 
           {
 
@@ -165,14 +167,14 @@ export const Home = () => {
 
       <Row>
         <Col id="action_message" lg={3} md={12} sm={12} xs={12}>
-          <h2>For more beauty products please checkout our store</h2>
+          <h2>Browse all our movie collection form store</h2>
           <Button variant='light'><NavLink style={{textDecoration:'none', color:'black'}} to={'/store'}>Store</NavLink></Button>
         </Col>
       </Row>
 
       <Row className="electronics__section">
 
-      <h3>Beauty</h3>
+      <h3>Popular</h3>
 
           {
 
@@ -189,7 +191,7 @@ export const Home = () => {
       <Row>
 
       <Col id="parallex_second" lg={12} md={12} sm={12} xs={12}>
-          <h2>All your home deco needs</h2>
+          <h2>The Amazing Spiderman is here</h2>
         </Col>
       </Row>
 
@@ -197,7 +199,7 @@ export const Home = () => {
 
       <Row className="electronics__section">
 
-      <h3>Furniture</h3>
+      <h3>Upcoming</h3>
 
       {
 

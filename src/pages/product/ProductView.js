@@ -19,15 +19,17 @@ const ProductView = () => {
 
     const asyncFunction = async()=>{
 
-        let data = await fetch(`https://dummyjson.com/products/${param.id}`).then((response)=>{
+        // let data = await fetch(`https://dummyjson.com/products/${param.id}`).then((response)=>{
+          let data = await fetch('../utils/data.json').then((response)=>{
 
         return response.json();
 
         }).then((data)=>{
 
           
-
-          setPdata(data);
+          const newParam = param.id - 1;
+          setPdata(data[newParam]);
+         
 
         })
       }
@@ -50,7 +52,7 @@ const ProductView = () => {
 
         </Row>
 
-        <Container>
+        <Container style={{width:'50%'}}>
 
           <Row id="productDiv">
 
@@ -58,7 +60,7 @@ const ProductView = () => {
           <h3>Description</h3><br></br>
           <h5>{pdata.title}</h5>
           <p>
-          {pdata.description}adable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+          {pdata.description}
           </p>
           </Col>
 

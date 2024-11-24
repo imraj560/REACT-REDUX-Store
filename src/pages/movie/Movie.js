@@ -39,13 +39,15 @@ const Movie = () => {
 
     const asyncFunction = async() => {
 
-      let data = await fetch('https://dummyjson.com/products').then((response)=>{
+      //let data = await fetch('https://dummyjson.com/products').then((response)=>{
+      let data = await fetch('../utils/data.json').then((response)=>{  
 
         return response.json();
 
       }).then((data)=>{
 
-          setMovies(data.products);
+          setMovies(data);
+          console.log('movies',data)
 
       })
     }
@@ -165,32 +167,36 @@ useEffect(()=>{
       <Card style={{marginBottom:"20px"}}>
         <Card.Header style={{backgroundColor:"black", color:"white"}}>Filter Products <Funnel size={20}/> </Card.Header>
         <Card.Body>
-      <label for="basic-url" style={{fontWeight:"600", fontSize:"18px", marginBottom:"20px"}}>Search Products</label>
+      <label for="basic-url" style={{fontWeight:"600", fontSize:"18px", marginBottom:"20px"}}>Search Movies</label>
       <div class="input-group mb-3" >
-        <input placeholder='search a product'  onChange = {onSearchChange} style={{marginBottom:"30px"}} type="text" class="form-control" id="search-box" aria-describedby="basic-addon3" />
+        <input placeholder='search'  onChange = {onSearchChange} style={{marginBottom:"30px"}} type="text" class="form-control" id="search-box" aria-describedby="basic-addon3" />
       </div>
 
       <label style={{fontWeight:"600", fontSize:"18px", marginBottom:"20px"}}>Sort Products</label>
       <div class="form-check">
-      <input type="checkbox" class="form-check-input" value='fragrance' onChange={onCheckChange}/>
-      <label class="form-check-label" for="exampleCheck1">Fragrance</label>
+      <input type="checkbox" class="form-check-input" value='animation' onChange={onCheckChange}/>
+      <label class="form-check-label" for="exampleCheck1">Animation</label>
       </div>
       <div class="form-check">
-      <input type="checkbox" class="form-check-input" value="groceries" onChange={onCheckChange}/>
-      <label class="form-check-label" for="exampleCheck1">Groceries</label>
+      <input type="checkbox" class="form-check-input" value="adventure" onChange={onCheckChange}/>
+      <label class="form-check-label" for="exampleCheck1">Adventure</label>
       </div>
       <div class="form-check">
-      <input type="checkbox" class="form-check-input" value="beauty" onChange={onCheckChange}/>
-      <label class="form-check-label" for="exampleCheck1">Beauty</label>
+      <input type="checkbox" class="form-check-input" value="action" onChange={onCheckChange}/>
+      <label class="form-check-label" for="exampleCheck1">Action</label>
       </div>
       <div class="form-check">
-      <input type="checkbox" class="form-check-input" value="furniture" onChange={onCheckChange}/>
-      <label style={{marginBottom:"30px"}} class="form-check-label" for="exampleCheck1">Home decoration</label>
+      <input type="checkbox" class="form-check-input" value="romantic" onChange={onCheckChange}/>
+      <label class="form-check-label" for="exampleCheck1">Romance</label>
+      </div>
+      <div class="form-check">
+      <input type="checkbox" class="form-check-input" value="drama" onChange={onCheckChange}/>
+      <label style={{marginBottom:"30px"}} class="form-check-label" for="exampleCheck1">Drama</label>
       </div>
 
       <label for="customRange1" class="form-label" style={{fontWeight:"600", fontSize:"18px", marginTop:"20px", marginBottom:"20px"}}>Price Range(min To max)</label>
 
-      <input type="range" value={rangeField} class="form-range" min={0} max={3000} step={5} id="customRange1" onChange={onRangeChange}></input>
+      <input type="range" value={rangeField} class="form-range" min={0} max={100} step={5} id="customRange1" onChange={onRangeChange}></input>
       <span>0</span>-<span style={{marginBottom:"35px"}}>{rangeField}</span>
 
         </Card.Body>
