@@ -194,7 +194,7 @@ useEffect(()=>{
       <label style={{marginBottom:"30px"}} class="form-check-label" for="exampleCheck1">Drama</label>
       </div>
 
-      <label for="customRange1" class="form-label" style={{fontWeight:"600", fontSize:"18px", marginTop:"20px", marginBottom:"20px"}}>Price Range(min To max)</label>
+      <label for="customRange1" class="form-label" style={{fontWeight:"600", fontSize:"18px", marginTop:"20px", marginBottom:"20px"}}>Price Range</label>
 
       <input type="range" value={rangeField} class="form-range" min={0} max={100} step={5} id="customRange1" onChange={onRangeChange}></input>
       <span>0</span>-<span style={{marginBottom:"35px"}}>{rangeField}</span>

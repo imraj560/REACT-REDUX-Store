@@ -33,7 +33,7 @@ const Footer = ()=>{
             </Col>
             <Col md={12} lg={3} sm={12} style={{padding:'15px 0px'}}>
             <h4 style={{fontWeight:'600'}}>Contacts</h4>
-            <ul style={{padding:'0px', lineHeight:'30px'}}>
+            <ul style={{padding:'0px', lineHeight:'30px', fontSize:'14px'}}>
               <li><EnvelopeAtFill/>: raju560.webdev@gmail.com</li>
               <li><CompassFill/>: Quebec, Montreal, Snowden</li>
             
