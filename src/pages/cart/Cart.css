@@ -56,13 +56,13 @@
 .cart__banner{
 
     min-height: 20vh!important;
-    background-color:#f5f0f0;
+    background-color:black;
     text-align: center;
 }
 
 .cart__banner > p{
 
-    color:black;
+    color:white;
     font-size: 25px;
     line-height: 20vh;
 }

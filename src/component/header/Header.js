@@ -7,13 +7,14 @@ import { logout } from '../../features/userSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import LoginLink from '../authNav/LoginLink';
 import LogoutLink from '../authNav/LogoutLink';
-//import './Header.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Button, NavDropdown, Table } from 'react-bootstrap';
 import logo from '../../assets/images/logo.png';
-import { Cart } from 'react-bootstrap-icons';
+import { Cart, ArrowRightShort, XCircle, PlusCircle, DashCircle, CircleFill } from 'react-bootstrap-icons';
 import { Unlock } from 'react-bootstrap-icons';
+import { removeCartItem, incrementQuantity, decrementQuantity} from '../../features/cartSlice';
 
 const Header = () => {
 
@@ -30,6 +31,34 @@ const Header = () => {
    return totalQty;
 
  });
+
+ const quantityTotal = ()=>{
+
+  let total = 0;
+
+  cartItem.forEach(item => {
+      total+= item.quantity
+  });
+
+  return total;
+}
+
+ let avg = 0;
+ const avgTotal = ()=>{
+
+   cartItem.forEach(item=>{
+
+     avg += item.quantity * item.price;
+
+   })
+   
+   return avg.toFixed(3); 
+   
+ }
+
+ avgTotal();
+
+ const priceDetail = {"price":avg};
 
  const toggleClass = () => {
 
@@ -68,7 +97,76 @@ const Header = () => {
            
           </Nav>
           <Nav>
-          <Nav.Link href="#deets"><NavLink to={'/cart'}><Cart size={25} color='black'/></NavLink><span style={{fontSize:'18px', fontWeight:'bold'}}>{totalQty}</span></Nav.Link>
+          <NavDropdown title={`Cart ${totalQty}`} style={{fontWeight:660}} id="basic-nav-dropdown">
+             <Table style={{fontSize:'11PX'}}>
+
+             <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  cartItem.map((data)=>{
+                      
+                    const qtyPrice = ()=>{
+
+                      let price;
+                      price = data.price * data.quantity;
+
+                      return price.toFixed(3);
+                    }
+
+                    return(
+
+                      <tr key={data.id}>
+
+                        <td>{data.title}</td>
+                  
+                        <td>
+                            <span style={{cursor:'pointer'}} onClick={()=>dispatch(incrementQuantity(data.id))}><PlusCircle size={12}/></span>
+                            <span style={{padding:"5px 5px"}}>{data.quantity}</span>
+                            <span style={{cursor:'pointer'}} onClick={()=>dispatch(decrementQuantity(data.id))}><DashCircle size={12}/></span>
+                        </td>
+                        <td>{qtyPrice()}</td>
+                        <td>
+                          <span style={{cursor:'pointer'}} onClick={()=>dispatch(removeCartItem(data.id))}><XCircle size={12}/></span>
+                        </td>
+
+                      </tr>
+                    )
+                      
+
+                  })
+                }
+              
+              </tbody>
+              <tfoot>
+                 <tr>
+                  <td colSpan={2}>Total Price</td>
+                  <td>{avg.toFixed(3)}</td>
+                  <td></td>
+                  
+                
+                </tr>
+
+              </tfoot>
+
+              
+               
+
+             
+
+
+             </Table>
+            
+              <NavDropdown.Item href="#action/3.4">
+              <NavLink style={{textDecoration:'none', color:'black', fontWeight:'bold', fontSize:'14px'}} to={'/cart'}><Button variant='secondary'>Checkout <ArrowRightShort /></Button></NavLink>
+              </NavDropdown.Item>
+            </NavDropdown>
           <Nav.Link><NavLink to={'/store'} style={{textDecoration:"none", color:"black",fontWeight:"bold"}}>Store</NavLink></Nav.Link>
             <LoginLink>
              
