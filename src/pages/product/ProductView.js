@@ -8,6 +8,8 @@ import {Button} from "react-bootstrap";
 import { Card } from "react-bootstrap";
 import Layout from "../../component/layout/layout";
 import MovieCard from "../../component/movie/MovieCard";
+import { Calendar3, ClockFill, Star } from "react-bootstrap-icons";
+import StarRating from "../../component/rating/StarRating";
 import './ProductView.css';
 
 const ProductView = () => {
@@ -58,10 +60,13 @@ const ProductView = () => {
 
           <Col lg={6} >
           <h3>Description</h3><br></br>
-          <h5>{pdata.title}</h5>
+          <p style={{fontWeight:'bold', fontSize:"20PX"}}>{pdata.title}</p>
           <p>
           {pdata.description}
           </p>
+          <p style={{marginBottom:'25px'}}><Calendar3 size={22} style={{fontWeight:600, marginRight:'7px'}}/> Release Date:  {pdata.Release}</p>
+          <p style={{marginBottom:'25px'}}><ClockFill size={22} style={{fontWeight:600, marginRight:'7px'}}/> Run Time:  {pdata.Runtime}</p>
+          <p style={{display:'flex', flexDirection:'row'}}><Star size={22} style={{fontWeight:600, marginRight:'7px'}}/>  Rating:  <StarRating rating={pdata.rating} totalStars={5} /></p>
           </Col>
 
           

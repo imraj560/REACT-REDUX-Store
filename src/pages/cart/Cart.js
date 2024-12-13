@@ -70,7 +70,7 @@ const Cart = () => {
               </thead>
               <tbody>
                 {
-                  cartItem.map((data)=>{
+                  cartItem ?? cartItem.map((data)=>{
                       
                     const qtyPrice = ()=>{
 
