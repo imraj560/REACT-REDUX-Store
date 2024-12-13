@@ -1,12 +1,12 @@
 .view__banner{
 
     min-height: 20vh!important;
-    background-color:#f1f1f1;
+    background-color:black;
 }
 
 .view__banner > p{
 
-    columns: black;
+    color: white;
     font-size: 30px;
     line-height: 20vh;
     text-align: center;

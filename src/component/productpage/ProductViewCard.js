@@ -1,10 +1,14 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import { Star, StarFill } from "react-bootstrap-icons";
+import StarRating from "../rating/StarRating";
 
 const ProductViewCard = ({props})=>{
 
-    const{id, title, price, description, image} = props;
+    const{id, title, price, description, image, rating} = props;
+
+   
 
     return(
         <Card style={{ width: '100%'}}>
@@ -15,9 +19,8 @@ const ProductViewCard = ({props})=>{
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>
-           <span style={{fontSize:"20px"}}>${price}</span><br/>
-            Description:<br/>
-           {description}
+           <span style={{fontSize:"17px"}}>Price: ${price}</span><br/>
+           Rating: <StarRating rating={rating} totalStars={5} />
           </Card.Text>
         </Card.Body>
       </Card>
