@@ -3,6 +3,7 @@ import { Card } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { Star, StarFill } from "react-bootstrap-icons";
 import StarRating from "../rating/StarRating";
+import './ProductViewCard.css'
 
 const ProductViewCard = ({props})=>{
 
@@ -11,7 +12,7 @@ const ProductViewCard = ({props})=>{
    
 
     return(
-        <Card style={{ width: '100%'}}>
+        <Card id="productView_Card" style={{ width: '100%'}}>
         <NavLink to={`/productView/${id}`}> {/**Reminder: you have to use back ticks in template literals */}
             <Card.Img variant="top" src={image} style={{height:"400px"}} />
         </NavLink>    

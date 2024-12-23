@@ -5,6 +5,7 @@ import { Button } from 'react-bootstrap';
 import { Trash } from 'react-bootstrap-icons';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeCartItem, incrementQuantity, decrementQuantity} from '../../features/cartSlice';
+import { selectUser } from '../../features/userSlice';
 import Layout from '../../component/layout/layout';
 import PaypalButton from '../../component/paypal/PaypalButton';
 import './Cart.css';
@@ -13,6 +14,7 @@ const Cart = () => {
 
     const dispatch = useDispatch();
     const cartItem = useSelector((state) => state.cart.cart);
+    const user = useSelector((state) => state.user.user);
 
     const quantityTotal = ()=>{
 
@@ -55,6 +57,9 @@ const Cart = () => {
         </Row>
 
         <div className='cartContainer'>
+          <Row>
+            <p style={{fontSize:'20px'}}>Your items,  <span style={{fontWeight:'600', color:'gray'}}>{user.email}</span></p>
+          </Row>
             <Table responsive="sm">
               <thead>
                 <tr>
