@@ -22,7 +22,7 @@ root.render(
     <Provider store={store}>
       <PersistGate persistor={persistor}>
       <ToastContainer/>
-        <GoogleOAuthProvider clientId='170371053408-5735p1nomvi9k6h4pcqmnnb5a0gifbiu.apps.googleusercontent.com'>
+        <GoogleOAuthProvider clientId='170371053408-nuobq4b4kael1pmrm2kj162p6jbnvsgb.apps.googleusercontent.com'>
          <App />
         </GoogleOAuthProvider>   
       </PersistGate>
