@@ -164,18 +164,18 @@ const Header = () => {
              </Table>
             
               <NavDropdown.Item href="#action/3.4">
-              <NavLink style={{textDecoration:'none', color:'black', fontWeight:'bold', fontSize:'14px'}} to={'/cart'}><Button variant='secondary'>Checkout <ArrowRightShort /></Button></NavLink>
+              <NavLink style={{textDecoration:'none', color:'black', fontSize:'14px'}} to={'/cart'}><Button variant='secondary'>Checkout <ArrowRightShort /></Button></NavLink>
               </NavDropdown.Item>
             </NavDropdown>
-          <Nav.Link><NavLink to={'/store'} style={{textDecoration:"none", color:"black",fontWeight:"bold"}}>Store</NavLink></Nav.Link>
+          <Nav.Link><NavLink to={'/store'} style={{textDecoration:"none", color:"black"}}>Store</NavLink></Nav.Link>
             <LoginLink>
              
-              <Nav.Link href="#deets"><span onClick={logOut} style={{fontWeight:"bold",color:"black"}}>Logout</span></Nav.Link>
+              <Nav.Link href="#deets"><span onClick={logOut} style={{color:"black"}}>Logout</span></Nav.Link>
               
             </LoginLink>
           
             <LogoutLink>
-              <Nav.Link href="#deets"><span ><NavLink style={{fontWeight:"bold", textDecoration:'none', color:'black'}} to={'/login'}>Login</NavLink></span></Nav.Link>
+              <Nav.Link href="#deets"><span ><NavLink style={{textDecoration:'none', color:'black'}} to={'/login'}>Login</NavLink></span></Nav.Link>
             </LogoutLink>
             
            

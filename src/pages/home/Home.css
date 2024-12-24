@@ -1,13 +1,9 @@
 #home_banner{
-    width: 100%;
-    min-height: 40vh!important;
     background-image: url('../../assets/images/banner_home.jpg');
     background-size: cover;
     background-repeat:no-repeat;
-    background-position: center top;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-position: top right;
+  
 }
 
 #home_banner > h2{
@@ -28,7 +24,7 @@
     /* background-color: green; */
     min-height: 35vh!important;
     text-align: left;
-    padding: 30px 20px;
+    padding: 30px 0px;
 }
 
 .electronics__section > h2{

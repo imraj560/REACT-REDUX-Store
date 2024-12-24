@@ -12,16 +12,16 @@ const ProductViewCard = ({props})=>{
    
 
     return(
-        <Card id="productView_Card" style={{ width: '100%'}}>
+        <Card id="productView_Card" style={{ width: '100%', borderRadius:'0px'}}>
         <NavLink to={`/productView/${id}`}> {/**Reminder: you have to use back ticks in template literals */}
             <Card.Img variant="top" src={image} style={{height:"400px"}} />
         </NavLink>    
         
         <Card.Body>
-          <Card.Title>{title}</Card.Title>
+          <Card.Title  style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'600'}}>{title}</Card.Title>
           <Card.Text>
-           <span style={{fontSize:"17px"}}>Price: ${price}</span><br/>
-           Rating: <StarRating rating={rating} totalStars={5} />
+           <span style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>${price}</span><br/>
+           <StarRating rating={rating} totalStars={5} />
           </Card.Text>
         </Card.Body>
       </Card>
