@@ -4,9 +4,8 @@ import { Button, Nav } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Paypal } from 'react-bootstrap-icons';
-import { CreditCard } from 'react-bootstrap-icons';
-import { Truck } from 'react-bootstrap-icons';
+import { BoxArrowInLeft, CreditCard, RSquare } from 'react-bootstrap-icons';
+import { Tv, CollectionPlayFill, DoorOpenFill } from 'react-bootstrap-icons';
 import { NavLink } from 'react-router-dom';
 import ProductViewCard from '../../component/productpage/ProductViewCard';
 import './Home.css';
@@ -100,37 +99,86 @@ export const Home = () => {
     <Layout>
 
       <Container>
-      <Row>
-        <Col style={{display:'flex',flexDirection:'column'}} id="home_banner" lg={12} md={12} sm={12} xs={12}>
-          <h2>Latest Movie Releases</h2>
-          <Button style={{width:'15%', backgroundColor:'#3b3b3b', border:"none", padding:'9px 9px'}}>
+      <Row id="banner_row">
+       
+        <Col md={6} style={{alignContent:'center'}}>
+          <h1 style={{fontFamily:'Poppins', fontWeight:'600', marginBottom:'20px'}}>Discover Your Next Favourite Movie Collection</h1>
+          <p style={{fontFamily:'Poppins', fontWeight:'300'}}>
+          Welcome to our movie store, where you can explore the latest and greatest films. Whether you're a fan of action, romance, or comedy, we have something for everyone! 
+          </p>
+         
+          <Button id="banner_button" variant='secondary'>
           <NavLink style={{textDecoration:'none', color:'white'}} to={'/store'}>Store</NavLink>
-            </Button>
+          </Button>
+          
         </Col>
-      </Row>
+        <Col md={6}  id="home_banner">
 
-      <Row className='service__section text-center mt-5'>
-
-        <h2 className='mb-5'>Services</h2>
-
-          <Col  lg={4} md={12} sm={12} xs={12} className='text-center p-5'>
-          <Paypal size={30}/>
-          <p>Paypal Instant Payment</p>
-          </Col>
-          <Col  lg={4} md={12} sm={12} xs={12} className='text-center p-5'>
-          <CreditCard size={30}/>
-          <p>Pay through Credit Card</p>
-          </Col>
-          <Col  lg={4} md={12} sm={12} xs={12} className='text-center p-5'>
-          <Truck size={30}/>
-          <p>Free Shipping</p>
-          </Col>
+        </Col>
 
       </Row>
 
-      <Row className="electronics__section mt-5">
+      <Row className='g-5' style={{marginBottom:'170px'}}>
 
-        <h3>Latest Release</h3>
+        <div style={{marginBottom:'10px'}}>
+          <p id="service_heading" className='mb-5'>
+             Discover the Latest Hits with Our Newest Movie Releases
+         </p>
+        </div>
+        
+
+          <Col  lg={4} md={12} sm={12} xs={12}>
+          <Tv size={30} style={{marginBottom:'20PX'}}/>
+          <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Explore the Best of Cinema with Our Top Rated Movies</p>
+          <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>Stay ahead with our curated selection of the highest-rated films.</p>
+          <Button variant='secondary' style={{width:'20%', borderRadius:'0px', fontSize:'15PX', background:'black', padding:'7px'}}><DoorOpenFill/>
+          <NavLink style={{textDecoration:'none', color:'white'}} to={'/store'}>Store</NavLink>
+          </Button>
+          </Col>
+          <Col  lg={4} md={12} sm={12} xs={12} className=''>
+          <CreditCard size={30} style={{marginBottom:'20PX'}}/>
+          <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Unlock Amazing Savings with Our Exclusive Deals on Movies</p>
+          <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>Don’t miss out on limited-time offers for your favorite films, Register Now!</p>
+          <Button variant='secondary' style={{width:'20%', borderRadius:'0px', fontSize:'15PX', background:'black', padding:'7px'}}> <RSquare/>
+           <NavLink style={{textDecoration:'none', color:'white'}} to={'/register'}>Sign</NavLink>
+          </Button>
+          </Col>
+          <Col  lg={4} md={12} sm={12} xs={12} className=''>
+          <CollectionPlayFill size={30} style={{marginBottom:'20PX'}}/>
+          <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Enjoy a Curated Collection of Must-Watch Movies Just for You</p>
+          <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>Find your next favorite film with our personalized recommendations.</p>
+          <Button variant='secondary' style={{width:'20%', borderRadius:'0px',fontSize:'15PX', background:'black', padding:'7px'}}> <BoxArrowInLeft/>
+          <NavLink style={{textDecoration:'none', color:'white'}} to={'/login'}>Login</NavLink>
+          </Button>
+          </Col>
+         
+
+      </Row>
+
+      <Row className="electronics__section" style={{marginBottom:'200px'}}>
+
+        <Row style={{marginBottom:'50px'}}>
+
+          <Col>
+          <p style={{fontSize:'13PX'}}>Discover</p>
+
+          <p style={{fontFamily:'Poppins', fontSize:'32PX', fontWeight:'600', textAlign:'left', width:'50%', marginBottom:'20px'}}>
+            Movies
+            </p>
+
+            <p style={{fontSize:'13PX', marginBottom:'0PX'}}>Explore our extensive collection of movies for everyone!</p>   
+          </Col>
+
+          <Col style={{position:'relative'}}>
+            <Button id='store_button' className="float-end mt-auto" variant='secondary'>
+            <NavLink style={{textDecoration:'none', color:'WHITE'}} to={'/store'}>Store</NavLink>
+            </Button>
+          </Col>
+          
+
+          
+        </Row>
+      
 
           {
           groceries.map((data)=>(
@@ -141,17 +189,12 @@ export const Home = () => {
           ))
         }
 
-      </Row>
+     
 
-      <Row>
-      <Col id="parallex" lg={12} md={12} sm={12} xs={12}>
-          <h2>We will notify you of upcoming movies</h2>
-        </Col>
-      </Row>
 
-      <Row className="electronics__section">
+     
 
-      <h3>Kids and Family</h3>
+     
 
           {
 
@@ -166,56 +209,31 @@ export const Home = () => {
       </Row>
 
       <Row>
-        <Col id="action_message" lg={3} md={12} sm={12} xs={12}>
-          <h2>Browse all our movie collection form store</h2>
-          <Button variant='light'><NavLink style={{textDecoration:'none', color:'black'}} to={'/store'}>Store</NavLink></Button>
+        <Col>
+        <p style={{fontFamily:'Poppins', fontSize:'32PX', fontWeight:'600', textAlign:'left', marginBottom:'10px'}}>
+          Join Our Movie Lovers Community
+          </p>
+
+        <p style={{fontSize:'13PX', marginBottom:'0PX'}}>Explore our extensive collection of movies for everyone!</p>   
+
         </Col>
-      </Row>
-
-      <Row className="electronics__section">
-
-      <h3>Popular</h3>
-
-          {
-
-        beauty.map((data)=>(
-        <Col lg={3} md={12} sm={12} xs={12} style={{marginBottom:"20px"}}>   
-          <ProductViewCard props={data} />
-        </Col>
-
-        ))
-      }
-
-      </Row>
-
-      <Row>
-
-      <Col id="parallex_second" lg={12} md={12} sm={12} xs={12}>
-          <h2>The Amazing Spiderman is here</h2>
+        
+       
+        <Col>
+            <Button id="button_one" className="float-end mt-auto" variant='secondary'>
+            <NavLink style={{textDecoration:'none', color:'WHITE'}} to={'/store'}>Store</NavLink>
+            </Button>
+            <Button id="button_two" className="float-end mt-auto" variant='secondary'>
+            <NavLink style={{textDecoration:'none', color:'black'}} to={'/login'}>Register</NavLink>
+            </Button>
+            
         </Col>
       </Row>
 
 
 
-      <Row className="electronics__section">
 
-      <h3>Upcoming</h3>
-
-      {
-
-      furniture.map((data)=>(
-      <Col lg={3} md={12} sm={12} xs={12} style={{marginBottom:"20px"}}>   
-      <ProductViewCard props={data} />
-      </Col>
-
-      ))
-      }
-
-
-
-
-      </Row>
-
+     
 
     </Container>
       
