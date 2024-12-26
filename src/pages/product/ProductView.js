@@ -50,7 +50,7 @@ const ProductView = () => {
 
         <Row className="view__banner g-0">
 
-            <p>Product Display</p>
+            <p style={{fontFamily:'Poppins', fontSize:'32PX', fontWeight:'600'}}>Product Display</p>
 
         </Row>
 
@@ -59,12 +59,12 @@ const ProductView = () => {
           <Row id="productDiv">
 
           <Col lg={6} >
-          <h3>Description</h3><br></br>
-          <p style={{fontWeight:'bold', fontSize:"20PX"}}>{pdata.title}</p>
+          <h3>Description</h3><br/>
+          <p style={{fontWeight:'bold', fontSize:"17PX"}}>{pdata.title}</p>
           <p>
           {pdata.description}
           </p>
-          <p style={{marginBottom:'25px'}}><Calendar3 size={22} style={{fontWeight:600, marginRight:'7px'}}/> Release Date:  {pdata.Release}</p>
+          <p style={{marginBottom:'25px', marginTop:'30PX'}}><Calendar3 size={22} style={{fontWeight:600, marginRight:'7px'}}/> Release Date:  {pdata.Release}</p>
           <p style={{marginBottom:'25px'}}><ClockFill size={22} style={{fontWeight:600, marginRight:'7px'}}/> Run Time:  {pdata.Runtime}</p>
           <p style={{display:'flex', flexDirection:'row'}}><Star size={22} style={{fontWeight:600, marginRight:'7px'}}/>  Rating:  <StarRating rating={pdata.rating} totalStars={5} /></p>
           </Col>

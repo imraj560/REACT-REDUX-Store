@@ -41,11 +41,10 @@ const MovieCard = ({movieProp}) => {
             </NavLink>  
           <Card.Body>
             <Card.Title>{title}</Card.Title>
-            {description}
             <Card.Text>
              {price}
             </Card.Text>
-            <Button variant="secondary"  onClick={cartVerification}>Add To Cart</Button>
+            <Button style={{borderRadius:"0px", border:'1px solid black'}} variant="default"  onClick={cartVerification}>Add To Cart</Button>
           </Card.Body>
         </Card>
 

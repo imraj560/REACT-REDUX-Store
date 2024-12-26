@@ -6,97 +6,83 @@
   
 }
 
+#banner_row{
+
+    height: 60vh;
+    margin-top: 100px;
+    margin-bottom: 300px;
+}
+
 #home_banner > h2{
 
     color:white;
     font-size: 35px;
 }
 
-.service__section > h2{
+#service_heading{
 
-    font-size: 25px;
-}
-
-
-
-.electronics__section{
-
-    /* background-color: green; */
-    min-height: 35vh!important;
+    font-family: 'Poppins';
+    font-size: 32px;
+    font-weight: 600;
     text-align: left;
-    padding: 30px 0px;
+    width: 50%;
 }
 
-.electronics__section > h2{
+#banner_button{
 
-    margin-bottom: 30px;
-    font-size: 30px;
+    width: 20%;
+    border-radius: 0px;
+    background:black;
+    padding: 15px;
 }
 
 
-#action_message{
+#button_one{
 
-    height: 100px;
-    width: 100%;
+    width: 20%;
+    border-radius: 0px;
+    font-size: 15px;
     background-color: black;
-    padding: 60px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#action_message > h2{
-
-    color:white;
-    font-size: 30px;
-}
-
-#parallex{
-
-    min-height: 400px!important;
-    background-color:red;
-    background-image: url('../../assets/images/parallex_new.jpg');
-    background-size: cover;
-    background-position:center right;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 7px;
+    margin-left: 5px;
 
 
 }
 
+#button_two{
+
+    width: 20%;
+    border-radius: 0px;
+    font-size: 15px;
+    background-color: white;
+    padding: 7px;
+   
 
 
-#parallex > h2{
-
-    color:white;
-    font-size: 35px;
 }
 
-#parallex_second{
+#store_button{
 
-    min-height: 400px!important;
-    background-color:red;
-    background-image: url('../../assets/images/furniture.jpeg');
-    background-size: cover;
-    background-position:center right;
-    background-attachment: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width:20%;
+    position:absolute;
+    bottom: 0px;
+    right:0px;
+    border-radius: 0px;
+    font-size: 15px;
+    background-color: black;
+    padding: 7px;
 
 
 }
 
 
 
-#parallex_second > h2{
 
-    color:white;
-    font-size: 35px;
-}
+
+
+
+
+
 
 
 
@@ -122,6 +108,108 @@
         color:white;
         font-size: 17px;
         font-weight: 600;
+    }
+
+}
+
+@media only screen and (max-width: 992px){
+
+    #home_banner{
+        background-image: url('../../assets/images/banner_home.jpg');
+        background-size: cover;
+        background-repeat:no-repeat;
+        background-position: top left;
+      
+    }
+
+    #banner_button{
+
+        width: 50%;
+    }
+
+    #service_heading{
+
+        font-family: 'Poppins';
+        font-size: 32px;
+        font-weight: 600;
+        text-align: left;
+        width: 100%;
+    }
+
+    #button_one{
+
+        width: 20%;
+        border-radius: 0px;
+        font-size: 12px;
+        background-color: black;
+        padding: 7px;
+        margin-left: 5px;
+    
+    
+    }
+    
+    #button_two{
+    
+        width: 20%;
+        border-radius: 0px;
+        font-size: 12px;
+        background-color: white;
+        padding: 7px;
+       
+    
+    
+    }
+
+
+
+
+}
+
+
+@media only screen and (max-width: 768px){
+
+    #banner_row{
+        margin-top: 0px;
+        height: 100vh;
+        margin-bottom: 300px;
+    }
+
+    #button_one{
+
+        width: 48%;
+        border-radius: 0px;
+        font-size: 12px;
+        background-color: black;
+        padding: 10px;
+        margin-left: 5px;
+    
+    
+    }
+    
+    #button_two{
+    
+        width: 48%;
+        border-radius: 0px;
+        font-size: 12px;
+        background-color: white;
+        padding: 10px;
+       
+    
+    
+    }
+
+    #store_button{
+
+        width:40%;
+        position:absolute;
+        bottom: 0px;
+        right:0px;
+        border-radius: 0px;
+        font-size: 15px;
+        background-color: black;
+        padding: 7px;
+    
+    
     }
 
 }
