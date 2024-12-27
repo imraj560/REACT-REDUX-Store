@@ -3,7 +3,14 @@
     background-size: cover;
     background-repeat:no-repeat;
     background-position: top right;
+    border-radius: 10px;
   
+}
+
+#text_banner{
+
+    align-content: center;
+    padding: 0px;
 }
 
 #banner_row{
@@ -13,11 +20,7 @@
     margin-bottom: 300px;
 }
 
-#home_banner > h2{
 
-    color:white;
-    font-size: 35px;
-}
 
 #service_heading{
 
@@ -26,6 +29,7 @@
     font-weight: 600;
     text-align: left;
     width: 50%;
+    margin-bottom: 80px;
 }
 
 #banner_button{
@@ -80,99 +84,32 @@
 
 
 
+@media only screen and (max-width: 768px){
 
+    #banner_row{
 
-
-
-
-
-
-
-@media only screen and (max-width: 738px){
-
-    #home_banner > h2{
-
-        font-size:17px;
-        font-weight: 600;
+        padding: 0px 0px;
+        margin-top: 0px;
     }
 
-    #action_message > h2{
+    #text_banner{
 
-        color:white;
-        font-size:17px;
-      
-    }
-
-    #parallex > h2{
-
-        color:white;
-        font-size: 17px;
-        font-weight: 600;
-    }
-
-}
-
-@media only screen and (max-width: 992px){
-
-    #home_banner{
-        background-image: url('../../assets/images/banner_home.jpg');
-        background-size: cover;
-        background-repeat:no-repeat;
-        background-position: top left;
-      
-    }
-
-    #banner_button{
-
-        width: 50%;
+        height: 40vh;
+        margin-bottom: 0px;
     }
 
     #service_heading{
 
-        font-family: 'Poppins';
-        font-size: 32px;
-        font-weight: 600;
-        text-align: left;
+        padding: 0px 0px;
         width: 100%;
     }
 
-    #button_one{
+    #home_banner{
 
-        width: 20%;
-        border-radius: 0px;
-        font-size: 12px;
-        background-color: black;
-        padding: 7px;
-        margin-left: 5px;
-    
-    
-    }
-    
-    #button_two{
-    
-        width: 20%;
-        border-radius: 0px;
-        font-size: 12px;
-        background-color: white;
-        padding: 7px;
-       
-    
-    
-    }
-
-
-
-
-}
-
-
-@media only screen and (max-width: 768px){
-
-    #banner_row{
+        height: 40vh;
         margin-top: 0px;
-        height: 100vh;
-        margin-bottom: 300px;
     }
+  
 
     #button_one{
 
@@ -213,6 +150,64 @@
     }
 
 }
+
+
+
+@media only screen and (max-width: 570px){
+
+
+    #banner_row{
+
+        padding: 0px 20px;
+        margin-top: 0px;
+    }
+
+    #text_banner{
+
+        height: 40vh;
+        margin-bottom: 0px;
+    }
+
+    #service_heading{
+
+        padding: 0px 30px
+    }
+
+    #home_banner{
+
+        height: 40vh;
+        margin-top: 0px;
+    }
+
+    #discover{
+
+        padding: 0px 30px;
+       
+    }
+
+    
+
+    #discover > Col {
+
+        padding: 30px 0px;
+    }
+
+    #movie {
+
+        padding: 0px 30px
+    }
+
+    #community{
+
+        padding: 0px 30px
+    }
+
+    #home_banner{
+
+        border-radius: 10px;
+    }
+}
+
 
 
 
