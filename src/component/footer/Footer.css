@@ -20,6 +20,16 @@ footer{
   }
 
 
+  @media only screen and (max-width: 570px){
+
+    footer{
+
+        padding: 10px 30px;
+        font-size: 12px;
+    }
+  }  
+
+
 /* footer > p{
 
     color: black;
