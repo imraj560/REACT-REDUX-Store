@@ -1,35 +1,67 @@
-#home_banner{
+
+#banner_row{
+
+    height: 70vh;
+    margin-bottom: 150px;
+    /* background-color: gray; */
     background-image: url('../../assets/images/banner_home.jpg');
     background-size: cover;
     background-repeat:no-repeat;
-    background-position: top right;
-    border-radius: 10px;
-  
+    background-position: center top;
+}
+
+#text_banner > p{
+
+    color:white;
+}
+
+#text_banner > h1 {
+
+    color:white;
 }
 
 #text_banner{
 
     align-content: center;
-    padding: 0px;
-}
-
-#banner_row{
-
-    height: 60vh;
-    margin-top: 100px;
-    margin-bottom: 300px;
+    padding: 0px 0px 0px 40px;
+    height: 100%;
 }
 
 
-
-#service_heading{
+#service_heading > p{
 
     font-family: 'Poppins';
     font-size: 32px;
     font-weight: 600;
-    text-align: left;
-    width: 50%;
+    text-align: center;
     margin-bottom: 80px;
+}
+
+#services{
+
+    margin-bottom: 150px;
+}
+
+
+
+#store_title{
+
+    margin-bottom: 70px;
+}
+
+#store_button{
+
+    border-radius: 0px;
+    background-color: black;
+    width: 30%;
+    float: inline-end;
+    margin-top: auto;
+}
+
+#store_button_div{
+
+    height: 100%;
+    margin-top: auto;
 }
 
 #banner_button{
@@ -49,6 +81,7 @@
     background-color: black;
     padding: 7px;
     margin-left: 5px;
+    float:inline-end
 
 
 }
@@ -60,23 +93,46 @@
     font-size: 15px;
     background-color: white;
     padding: 7px;
+    float:inline-end
    
 
 
 }
 
-#store_button{
-
-    width:20%;
-    position:absolute;
-    bottom: 0px;
-    right:0px;
-    border-radius: 0px;
-    font-size: 15px;
-    background-color: black;
-    padding: 7px;
 
 
+@media only screen and (max-width: 992px){
+
+    #banner_button{
+
+        width:50%
+    }
+
+    #button_one{
+
+        width: 25%;
+        border-radius: 0px;
+        font-size: 15px;
+        background-color: black;
+        padding: 7px;
+        margin-left: 5px;
+        float:inline-end
+    
+    
+    }
+    
+    #button_two{
+    
+        width: 25%;
+        border-radius: 0px;
+        font-size: 15px;
+        background-color: white;
+        padding: 7px;
+        float:inline-end
+       
+    
+    
+    }
 }
 
 
@@ -86,19 +142,8 @@
 
 @media only screen and (max-width: 768px){
 
-    #banner_row{
 
-        padding: 0px 0px;
-        margin-top: 0px;
-    }
-
-    #text_banner{
-
-        height: 40vh;
-        margin-bottom: 0px;
-    }
-
-    #service_heading{
+    #service_heading > p{
 
         padding: 0px 0px;
         width: 100%;
@@ -113,23 +158,24 @@
 
     #button_one{
 
-        width: 48%;
+        width: 25%;
         border-radius: 0px;
-        font-size: 12px;
+        font-size: 15px;
         background-color: black;
-        padding: 10px;
-        margin-left: 5px;
+        padding: 7px;
+        float:none
     
     
     }
     
     #button_two{
     
-        width: 48%;
+        width: 25%;
         border-radius: 0px;
-        font-size: 12px;
+        font-size: 15px;
         background-color: white;
-        padding: 10px;
+        padding: 7px;
+        float:none
        
     
     
@@ -137,17 +183,29 @@
 
     #store_button{
 
-        width:40%;
-        position:absolute;
-        bottom: 0px;
-        right:0px;
         border-radius: 0px;
-        font-size: 15px;
         background-color: black;
-        padding: 7px;
-    
-    
+        width: 30%;
+        float:none;
+        margin-top:30px;
+       
     }
+
+    #store_title{
+
+        padding: 0px 30px;
+    }
+
+    #community{
+
+        margin-top:20px;
+    }
+
+   
+    
+  
+
+ 
 
 }
 
@@ -156,16 +214,10 @@
 @media only screen and (max-width: 570px){
 
 
-    #banner_row{
 
-        padding: 0px 20px;
-        margin-top: 0px;
-    }
+    #banner_button{
 
-    #text_banner{
-
-        height: 40vh;
-        margin-bottom: 0px;
+        width: 50%;
     }
 
     #service_heading{
@@ -179,27 +231,17 @@
         margin-top: 0px;
     }
 
-    #discover{
 
-        padding: 0px 30px;
-       
-    }
 
-    
+    #community_button{
 
-    #discover > Col {
-
-        padding: 30px 0px;
-    }
-
-    #movie {
-
-        padding: 0px 30px
+        margin-top:20px;
     }
 
     #community{
 
-        padding: 0px 30px
+        padding: 0px 30px;
+        margin-top: 20px;
     }
 
     #home_banner{
