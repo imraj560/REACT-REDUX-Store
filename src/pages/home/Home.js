@@ -173,7 +173,7 @@ export const Home = () => {
           
         </Row>
 
-      <Row id="movie"  style={{marginBottom:'200px'}}>
+      <Row id="movie">
       
 
           {

@@ -58,6 +58,11 @@
     margin-top: auto;
 }
 
+#movie{
+
+    margin-bottom: 200px;
+}
+
 #store_button_div{
 
     height: 100%;
@@ -247,6 +252,19 @@
     #home_banner{
 
         border-radius: 10px;
+    }
+
+    #movie{
+
+        padding:0px 30px;
+        margin-bottom: 100px;
+    }
+
+    #button_one{
+
+       margin-right: 10px;
+    
+    
     }
 }
 
