@@ -98,13 +98,13 @@ export const Home = () => {
 
     <Layout>
 
-      <Container>
-      <Row id="banner_row">
-       
-        <Col id="text_banner" md={6}>
+      <Container fluid>
+         <Row id='banner_row'>
+          
+          <Col id="text_banner" md={6} sm={6}>
           <h1 style={{fontFamily:'Poppins', fontWeight:'600', marginBottom:'20px'}}>Discover Your Next Favourite Movie Collection</h1>
           <p style={{fontFamily:'Poppins', fontWeight:'300'}}>
-          Welcome to our movie store, where you can explore the latest and greatest films. Whether you're a fan of action, romance, or comedy, we have something for everyone! 
+          Welcome to our movie store, where you can explore the latest and greatest films.
           </p>
          
           <Button id="banner_button" variant='secondary'>
@@ -112,55 +112,48 @@ export const Home = () => {
           </Button>
           
         </Col>
-        <Col md={6}  id="home_banner">
 
-        </Col>
 
-      </Row>
 
+        </Row>
+      </Container>
+
+     
+
+      <Container>
+     
 
       <Row id="service_heading">
 
-             Discover the Latest Hits with Our Newest Movie Release
+          <p>Discover the Latest Hits</p> 
 
       </Row>
 
-      <Row id="discover" style={{marginBottom:'170px'}}>
+      <Row id='services'>
 
 
-          <Col  lg={4} md={12} sm={12} xs={12} style={{padding:"30px 40px 30px 0px"}}>
+          <Col  lg={4} md={12} sm={12} xs={12} style={{textAlign:'center', padding:'40px 20px'}}>
           <Tv size={30} style={{marginBottom:'20PX'}}/>
-          <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Explore the Best of Cinema with Our Top Rated Movies</p>
-          <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>Stay ahead with our curated selection of the highest-rated films.</p>
-          <Button variant='secondary' style={{width:'20%', borderRadius:'0px', fontSize:'15PX', background:'black', padding:'7px'}}>
-          <NavLink style={{textDecoration:'none', color:'white'}} to={'/store'}>Store</NavLink>
-          </Button>
+          <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Explore the Best of Cinema</p>
+          <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>Stay ahead with our curated selection of films</p>
           </Col>
-          <Col  lg={4} md={12} sm={12} xs={12} style={{padding:"30px 40px 30px 0px"}}>
+          <Col  lg={4} md={12} sm={12} xs={12} style={{textAlign:'center', padding:'40px 20px'}}>
           <CreditCard size={30} style={{marginBottom:'20PX'}}/>
-          <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Unlock Amazing Savings with Our Exclusive Deals on Movies</p>
-          <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>Don’t miss out on limited-time offers for your favorite films, Register!</p>
-          <Button variant='secondary' style={{width:'20%', borderRadius:'0px', fontSize:'15PX', background:'black', padding:'7px'}}>
-           <NavLink style={{textDecoration:'none', color:'white'}} to={'/register'}>Sign</NavLink>
-          </Button>
+          <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Unlock Amazing Savings</p>
+          <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>Don’t miss out on limited-time offers for your favorite films.</p>
           </Col>
-          <Col  lg={4} md={12} sm={12} xs={12} style={{padding:"30px 0px"}}>
+          <Col  lg={4} md={12} sm={12} xs={12} style={{textAlign:'center', padding:'40px 20px'}}>
           <CollectionPlayFill size={30} style={{marginBottom:'20PX'}}/>
-          <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Enjoy a Curated Collection of Must-Watch Movies Just for You</p>
-          <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>Find your next favorite film with our personalized recommendations, Login</p>
-          <Button variant='secondary' style={{width:'20%', borderRadius:'0px',fontSize:'15PX', background:'black', padding:'7px'}}>
-          <NavLink style={{textDecoration:'none', color:'white'}} to={'/login'}>Login</NavLink>
-          </Button>
+          <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Enjoy a Curated Collection</p>
+          <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>Find your next favorite film with our collection</p>
           </Col>
          
 
       </Row>
 
-      <Row id="movie"  style={{marginBottom:'200px'}}>
+      <Row id="store_title">
 
-        <Row style={{marginBottom:'50px'}}>
-
-          <Col>
+          <Col md={6} sm={12}>
           <p style={{fontSize:'13PX'}}>Discover</p>
 
           <p style={{fontFamily:'Poppins', fontSize:'32PX', fontWeight:'600', textAlign:'left', width:'50%', marginBottom:'20px'}}>
@@ -170,8 +163,8 @@ export const Home = () => {
             <p style={{fontSize:'13PX', marginBottom:'0PX'}}>Explore our extensive collection of movies for everyone!</p>   
           </Col>
 
-          <Col style={{position:'relative'}}>
-            <Button id='store_button' className="float-end mt-auto" variant='secondary'>
+          <Col md={6} sm={12} id="store_button_div">
+            <Button id='store_button' variant='secondary'>
             <NavLink style={{textDecoration:'none', color:'WHITE'}} to={'/store'}>Store</NavLink>
             </Button>
           </Col>
@@ -179,6 +172,8 @@ export const Home = () => {
 
           
         </Row>
+
+      <Row id="movie"  style={{marginBottom:'200px'}}>
       
 
           {
@@ -189,12 +184,6 @@ export const Home = () => {
 
           ))
         }
-
-     
-
-
-     
-
      
 
           {
@@ -209,8 +198,10 @@ export const Home = () => {
 
       </Row>
 
+
+
       <Row id="community">
-        <Col>
+        <Col md={6}>
         <p style={{fontFamily:'Poppins', fontSize:'32PX', fontWeight:'600', textAlign:'left', marginBottom:'10px'}}>
           Join Our Movie Lovers Community
           </p>
@@ -220,11 +211,11 @@ export const Home = () => {
         </Col>
         
        
-        <Col>
-            <Button id="button_one" className="float-end mt-auto" variant='secondary'>
+        <Col md={6} id="community_button">
+            <Button id="button_one" variant='secondary'>
             <NavLink style={{textDecoration:'none', color:'WHITE'}} to={'/store'}>Store</NavLink>
             </Button>
-            <Button id="button_two" className="float-end mt-auto" variant='secondary'>
+            <Button id="button_two" variant='secondary'>
             <NavLink style={{textDecoration:'none', color:'black'}} to={'/login'}>Register</NavLink>
             </Button>
             

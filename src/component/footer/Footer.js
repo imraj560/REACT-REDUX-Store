@@ -16,7 +16,7 @@ const Footer = ()=>{
             </Col>
             <Col md={12} lg={3} sm={12} style={{padding:'15px 0px'}}>
             <h4 style={{fontWeight:'600'}}>Pages</h4>
-            <ul style={{padding:'0px', lineHeight:'30px'}}>
+            <ul style={{padding:'0px', lineHeight:'30px', fontWeight:'300', fontSize:'14PX'}}>
               <li>Store</li>
               <li>Movies</li>
               <li>About Us</li>
@@ -24,7 +24,7 @@ const Footer = ()=>{
             </Col>
             <Col md={12} lg={3} sm={12} style={{padding:'15px 0px'}}>
             <h4 style={{fontWeight:'600'}}>Features</h4>
-            <ul style={{padding:'0px', lineHeight:'30px'}}>
+            <ul style={{padding:'0px', lineHeight:'30px', fontSize:'14px', fontWeight:'300'}}>
               <li>Cart</li>
               <li>PayPal</li>
               <li>Credit Debit</li>
@@ -33,7 +33,7 @@ const Footer = ()=>{
             </Col>
             <Col md={12} lg={3} sm={12} style={{padding:'15px 0px'}}>
             <h4 style={{fontWeight:'600'}}>Contacts</h4>
-            <ul style={{padding:'0px', lineHeight:'30px', fontSize:'14px'}}>
+            <ul style={{padding:'0px', lineHeight:'30px', fontSize:'14px', fontWeight:'300'}}>
               <li><EnvelopeAtFill/>: raju560.webdev@gmail.com</li>
               <li><CompassFill/>: Quebec, Montreal, Snowden</li>
             

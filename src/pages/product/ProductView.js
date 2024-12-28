@@ -59,8 +59,8 @@ const ProductView = () => {
           <Row id="productDiv">
 
           <Col lg={6} >
-          <h3>Description</h3><br/>
-          <p style={{fontWeight:'bold', fontSize:"17PX"}}>{pdata.title}</p>
+          <h3 style={{fontWeight:'600', fontFamily:'Poppins', fontSize:"30PX"}}>Description</h3><br/>
+          <p>{pdata.title}</p>
           <p>
           {pdata.description}
           </p>
