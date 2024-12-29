@@ -99,7 +99,13 @@ export const Home = () => {
     <Layout>
 
       <Container fluid>
-         <Row id='banner_row'>
+        
+      </Container>
+
+     
+
+      <Container>
+      <Row id='banner_row'>
           
           <Col id="text_banner" md={6} sm={6}>
           <h1 style={{fontFamily:'Poppins', fontWeight:'600', marginBottom:'20px'}}>Discover Your Next Favourite Movie Collection</h1>
@@ -116,12 +122,6 @@ export const Home = () => {
 
 
         </Row>
-      </Container>
-
-     
-
-      <Container>
-     
 
       <Row id="service_heading">
 
@@ -132,17 +132,17 @@ export const Home = () => {
       <Row id='services'>
 
 
-          <Col  lg={4} md={12} sm={12} xs={12} style={{textAlign:'center', padding:'40px 20px'}}>
+          <Col  lg={4} md={12} sm={12} xs={12} style={{textAlign:'left', padding:'40px 20px'}}>
           <Tv size={30} style={{marginBottom:'20PX'}}/>
           <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Explore the Best of Cinema</p>
           <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>Stay ahead with our curated selection of films</p>
           </Col>
-          <Col  lg={4} md={12} sm={12} xs={12} style={{textAlign:'center', padding:'40px 20px'}}>
+          <Col  lg={4} md={12} sm={12} xs={12} style={{textAlign:'left', padding:'40px 20px'}}>
           <CreditCard size={30} style={{marginBottom:'20PX'}}/>
           <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Unlock Amazing Savings</p>
           <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>Don’t miss out on limited-time offers for your favorite films.</p>
           </Col>
-          <Col  lg={4} md={12} sm={12} xs={12} style={{textAlign:'center', padding:'40px 20px'}}>
+          <Col  lg={4} md={12} sm={12} xs={12} style={{textAlign:'left', padding:'40px 20px'}}>
           <CollectionPlayFill size={30} style={{marginBottom:'20PX'}}/>
           <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Enjoy a Curated Collection</p>
           <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>Find your next favorite film with our collection</p>
@@ -201,7 +201,8 @@ export const Home = () => {
 
 
       <Row id="community">
-        <Col md={6}>
+
+        <Col md={6} id="community_text">
         <p style={{fontFamily:'Poppins', fontSize:'32PX', fontWeight:'600', textAlign:'left', marginBottom:'10px'}}>
           Join Our Movie Lovers Community
           </p>

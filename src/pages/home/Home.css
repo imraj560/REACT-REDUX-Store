@@ -1,7 +1,7 @@
 
 #banner_row{
 
-    height: 70vh;
+    height: 50vh;
     margin-bottom: 150px;
     /* background-color: gray; */
     background-image: url('../../assets/images/banner_home.jpg');
@@ -33,7 +33,7 @@
     font-family: 'Poppins';
     font-size: 32px;
     font-weight: 600;
-    text-align: center;
+    text-align: left;
     margin-bottom: 80px;
 }
 
@@ -148,11 +148,7 @@
 @media only screen and (max-width: 768px){
 
 
-    #service_heading > p{
-
-        padding: 0px 0px;
-        width: 100%;
-    }
+   
 
     #home_banner{
 
@@ -168,7 +164,8 @@
         font-size: 15px;
         background-color: black;
         padding: 7px;
-        float:none
+        float:none;
+        margin-left: 0px;
     
     
     }
@@ -198,12 +195,23 @@
 
     #store_title{
 
-        padding: 0px 30px;
+        padding: 0px 0px;
     }
 
     #community{
 
         margin-top:20px;
+    }
+
+    #community_button{
+
+        padding-left: 0px;
+        margin-top: 10px;
+    }
+
+    #community_text{
+
+        padding-left: 0px;
     }
 
    
@@ -234,6 +242,16 @@
 
         height: 40vh;
         margin-top: 0px;
+    }
+
+    #store_title{
+
+        padding: 0px 30px;
+    }
+
+    #services{
+
+        padding: 0px 30px;
     }
 
 

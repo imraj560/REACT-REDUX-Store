@@ -48,13 +48,15 @@ const ProductView = () => {
 
     <Layout>
 
-        <Row className="view__banner g-0">
-
-            <p style={{fontFamily:'Poppins', fontSize:'32PX', fontWeight:'600'}}>Product Display</p>
-
-        </Row>
+        
 
         <Container style={{width:'50%'}}>
+
+           <Row className="view__banner g-0">
+
+          <p style={{fontFamily:'Poppins', fontSize:'32PX', fontWeight:'600'}}>Product Display</p>
+
+          </Row>
 
           <Row id="productDiv">
 
