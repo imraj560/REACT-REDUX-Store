@@ -24,19 +24,35 @@
     border-radius: 5px;
 }
 
-.banner{
+#store_banner{
 
-    background-color: black;
-    height: 300px;
-    margin-bottom: 20px;
+    background-color:rgb(255, 255, 255);
+    height:10vh;
+    margin-bottom: 40px;
+    margin-top: 60px;
+    
+   
    
 }
 
-.banner_text{
+#store_banner_text{
 
-   text-align: center;
-   line-height: 300px;
-   color: white;
+   text-align: left;
+   color:black;
    font-size: 50px;
+   font-weight: 600;
+   display: inline-block;
+   position: relative;
 }
+
+#store_banner_text::after {
+    content: '';
+    display: block;
+    width: 20%;
+    height: 3px; /* Thickness of the line */
+    border-bottom: 6px solid black;
+    position: absolute;
+    bottom: -1px; /* Distance from the title */
+    left: 3px;
+  }
 

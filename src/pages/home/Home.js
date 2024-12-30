@@ -4,7 +4,7 @@ import { Button, Nav } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { BoxArrowInLeft, CreditCard, RSquare } from 'react-bootstrap-icons';
+import { Amazon, BoxArrowInLeft, CreditCard, Facebook, RSquare } from 'react-bootstrap-icons';
 import { Tv, CollectionPlayFill, DoorOpenFill } from 'react-bootstrap-icons';
 import { NavLink } from 'react-router-dom';
 import ProductViewCard from '../../component/productpage/ProductViewCard';
@@ -197,6 +197,36 @@ export const Home = () => {
       }
 
       </Row>
+
+      <Row id="brand_title">
+
+        <p>Our Partners</p>
+
+      </Row>
+
+      <Row id='brand_title_logos'>
+
+
+        <Col  lg={4} md={12} sm={12} xs={12} style={{textAlign:'left', padding:'40px 20px'}}>
+        <Amazon size={30} style={{marginBottom:'20PX'}}/>
+        <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Amazon</p>
+        <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>One of our Top streaming partners</p>
+        </Col>
+        <Col  lg={4} md={12} sm={12} xs={12} style={{textAlign:'left', padding:'40px 20px'}}>
+        <Facebook size={30} style={{marginBottom:'20PX'}}/>
+        <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Facebook</p>
+        <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>We contribute to 15 percent of Ad Renvenue</p>
+        </Col>
+        <Col  lg={4} md={12} sm={12} xs={12} style={{textAlign:'left', padding:'40px 20px'}}>
+        <CollectionPlayFill size={30} style={{marginBottom:'20PX'}}/>
+        <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Enjoy a Curated Collection</p>
+        <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>Find your next favorite film with our collection</p>
+        </Col>
+
+
+      </Row>
+
+
 
 
 
