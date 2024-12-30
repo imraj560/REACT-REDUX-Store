@@ -155,7 +155,7 @@ useEffect(()=>{
 
     <Container>
 
-      <Row style={{width:"100%", padding:"0", margin:"0px 50px 5px 5px", marginBottom:"50px"}}>
+      <Row >
 
       <div id="store_banner">
 
@@ -229,7 +229,7 @@ useEffect(()=>{
 
     
 
-  </Row>
+    </Row>
     </Container>
 
         

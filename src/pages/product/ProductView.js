@@ -50,7 +50,7 @@ const ProductView = () => {
 
         
 
-        <Container style={{width:"50%"}}>
+        <Container>
 
            <Row id="product_banner">
 
