@@ -35,7 +35,7 @@ const MovieCard = ({movieProp}) => {
 
   return (
 
-          <Card style={{ width: '100%'}}>
+          <Card style={{ width: '100%', borderRadius:'0px'}}>
              <NavLink to={`/productView/${id}`}> {/**Reminder: you have to use back ticks in template literals */}
                <Card.Img variant="top" src={image} style={{height:"400px"}} />
             </NavLink>  

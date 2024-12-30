@@ -6,6 +6,10 @@ import { toast, ToastContainer } from 'react-toastify';
 import {auth} from '../../firebase/config';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import { GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from 'jwt-decode';
+import { loginUser, logout } from '../../features/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 
@@ -14,6 +18,8 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const[cPassword, setCpassword] = useState('');
+
+     const dispatch = useDispatch();
 
     const navigate = useNavigate();
 
@@ -48,7 +54,30 @@ const Register = () => {
 
     }
 
+    const handleSuccess = (credentialResponse) => {
    
+       const decoded = jwtDecode(credentialResponse.credential);
+       
+       dispatch(loginUser({
+           
+         uid:decoded.sub,
+         email:decoded.email,
+   
+       }))
+   
+       toast.success('Successfully Logged In !', {
+         position: toast.POSITION.TOP_RIGHT
+     });
+       navigate('/store');
+   
+      
+   
+     };
+   
+     const handleError = () => {
+   
+         console.error("Login Failed");
+     };
 
     return (
         <div className='register_div'>
@@ -72,6 +101,7 @@ const Register = () => {
           </form>
     
           <h5>Already Registered? <NavLink to="/login" style={{textDecoration:'none', color:'green'}}><span className='register__title'>Login</span></NavLink></h5>
+          <GoogleLogin onSuccess={handleSuccess} onError={handleError} /> 
            </div>
             
           

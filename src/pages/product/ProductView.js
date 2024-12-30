@@ -50,29 +50,28 @@ const ProductView = () => {
 
         
 
-        <Container style={{width:'50%'}}>
+        <Container style={{width:"50%"}}>
 
-           <Row className="view__banner g-0">
+           <Row id="product_banner">
 
-          <p style={{fontFamily:'Poppins', fontSize:'32PX', fontWeight:'600'}}>Product Display</p>
+            <p id="product_banner_text">Product Display</p>
 
           </Row>
 
           <Row id="productDiv">
 
-          <Col lg={6} >
-          <h3 style={{fontWeight:'600', fontFamily:'Poppins', fontSize:"30PX"}}>Description</h3><br/>
-          <p>{pdata.title}</p>
+          <Col lg={8}>
+          <p id="productDiv_title">{pdata.title}</p>
           <p>
           {pdata.description}
           </p>
-          <p style={{marginBottom:'25px', marginTop:'30PX'}}><Calendar3 size={22} style={{fontWeight:600, marginRight:'7px'}}/> Release Date:  {pdata.Release}</p>
-          <p style={{marginBottom:'25px'}}><ClockFill size={22} style={{fontWeight:600, marginRight:'7px'}}/> Run Time:  {pdata.Runtime}</p>
-          <p style={{display:'flex', flexDirection:'row'}}><Star size={22} style={{fontWeight:600, marginRight:'7px'}}/>  Rating:  <StarRating rating={pdata.rating} totalStars={5} /></p>
+          <p style={{marginBottom:'32px', marginTop:'30PX'}}><Calendar3 size={22} style={{fontWeight:600, marginRight:'7px'}}/> Release Date:  {pdata.Release}</p>
+          <p style={{marginBottom:'32px'}}><ClockFill size={22} style={{fontWeight:600, marginRight:'7px'}}/> Run Time:  {pdata.Runtime}</p>
+          <p style={{display:'flex', flexDirection:'row'}}><Star size={22} style={{fontWeight:600, marginRight:'7px'}}/> <StarRating rating={pdata.rating} totalStars={5} /></p>
           </Col>
 
           
-          <Col lg={6}>
+          <Col lg={4}>
           
           <MovieCard movieProp={pdata} />
 

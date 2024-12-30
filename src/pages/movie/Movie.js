@@ -4,9 +4,10 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card'
-import { Funnel } from 'react-bootstrap-icons';
+import { Funnel, Shop } from 'react-bootstrap-icons';
 import './Movie.css';
 import Layout from '../../component/layout/layout';
+
 
 
 const Movie = () => {
@@ -156,23 +157,23 @@ useEffect(()=>{
 
       <Row style={{width:"100%", padding:"0", margin:"0px 50px 5px 5px", marginBottom:"50px"}}>
 
-      <div className='banner'>
+      <div id="store_banner">
 
-        <p className='banner_text'>Our Store</p>
+        <p id='store_banner_text'>Our Store</p>
         
       </div>
 
-      <Col md={2}>
+      <Col md={3}>
 
-      <Card style={{marginBottom:"20px"}}>
-        <Card.Header style={{backgroundColor:"black", color:"white"}}>Filter Products <Funnel size={20}/> </Card.Header>
+      <Card style={{marginBottom:"20px", borderRadius:'0px'}}>
+        <Card.Header style={{backgroundColor:"black", color:"white", borderRadius:'0px'}}>Filter Products </Card.Header>
         <Card.Body>
-      <label for="basic-url" style={{fontWeight:"600", fontSize:"18px", marginBottom:"20px"}}>Search Movies</label>
+      <label for="basic-url" style={{fontSize:"18px", marginBottom:"20px"}}>Search Movies</label>
       <div class="input-group mb-3" >
         <input placeholder='search'  onChange = {onSearchChange} style={{marginBottom:"30px"}} type="text" class="form-control" id="search-box" aria-describedby="basic-addon3" />
       </div>
 
-      <label style={{fontWeight:"600", fontSize:"18px", marginBottom:"20px"}}>Sort Products</label>
+      <label style={{fontSize:"18px", marginBottom:"20px"}}>Sort Products</label>
       <div class="form-check">
       <input type="checkbox" class="form-check-input" value='animation' onChange={onCheckChange}/>
       <label class="form-check-label" for="exampleCheck1">Animation</label>
@@ -194,7 +195,7 @@ useEffect(()=>{
       <label style={{marginBottom:"30px"}} class="form-check-label" for="exampleCheck1">Drama</label>
       </div>
 
-      <label for="customRange1" class="form-label" style={{fontWeight:"600", fontSize:"18px", marginTop:"20px", marginBottom:"20px"}}>Price Range</label>
+      <label for="customRange1" class="form-label" style={{fontSize:"18px", marginTop:"20px", marginBottom:"20px"}}>Price Range</label>
 
       <input type="range" value={rangeField} class="form-range" min={0} max={100} step={5} id="customRange1" onChange={onRangeChange}></input>
       <span>0</span>-<span style={{marginBottom:"35px"}}>{rangeField}</span>
@@ -204,7 +205,7 @@ useEffect(()=>{
 
       </Col>
 
-      <Col md={10}>
+      <Col md={9}>
 
         <Row style={{width:"100%", margin:"0px"}}>
 

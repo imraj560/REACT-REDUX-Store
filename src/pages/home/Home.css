@@ -104,6 +104,26 @@
 
 }
 
+#brand_title{
+
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+
+#brand_title > p{
+
+    font-weight: 600;
+    font-size: 32px;
+}
+
+#brand_title_logos{
+
+    margin-bottom: 200px;
+}
+
+
+
 
 
 @media only screen and (max-width: 992px){
