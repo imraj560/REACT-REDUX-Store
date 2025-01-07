@@ -4,10 +4,17 @@ import { Button, Nav } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Amazon, BoxArrowInLeft, CreditCard, Facebook, RSquare } from 'react-bootstrap-icons';
+import Card from 'react-bootstrap/Card';
+import { Amazon, BoxArrowInLeft, CreditCard, Facebook, RSquare, Alarm, Calendar, CalendarDayFill  } from 'react-bootstrap-icons';
 import { Tv, CollectionPlayFill, DoorOpenFill } from 'react-bootstrap-icons';
 import { NavLink } from 'react-router-dom';
 import ProductViewCard from '../../component/productpage/ProductViewCard';
+import batman from '../../assets/images/batman.jpeg'
+import bond from '../../assets/images/bond.jpg'
+import ironman from '../../assets/images/ironman.jpg'
+import ambulance from '../../assets/images/ambulance.jpg'
+import gladiator from '../../assets/images/gladiator.jpg'
+import dune from '../../assets/images/dune.jpg'
 import './Home.css';
 
 export const Home = () => {
@@ -178,7 +185,7 @@ export const Home = () => {
 
           {
           groceries.map((data)=>(
-          <Col lg={3} md={12} sm={12} xs={12} style={{marginBottom:"20px"}}>   
+          <Col lg={3} md={4} sm={12} xs={12} style={{marginBottom:"20px"}}>   
           <ProductViewCard props={data} />
           </Col>
 
@@ -189,7 +196,7 @@ export const Home = () => {
           {
 
         fragrance.map((data)=>(
-        <Col lg={3} md={12} sm={12} xs={12} style={{marginBottom:"20px"}}>   
+        <Col lg={3} md={4} sm={12} xs={12} style={{marginBottom:"20px"}}>   
           <ProductViewCard props={data} />
         </Col>
 
@@ -198,31 +205,105 @@ export const Home = () => {
 
       </Row>
 
-      <Row id="brand_title">
+      
+      <Row id="soon_title">
+        <h2>Coming Soon</h2>
+      </Row>
 
-        <p>Our Partners</p>
+      <Row id="soon">
+
+        <Col lg={4} md={6} sm={12}>
+          <Card style={{ width: '100%' }}>
+            <Card.Img variant="top" src={ambulance} />
+            <Card.Body>
+              <Card.Title class="cart_title">Ambulance</Card.Title>
+              <Card.Text>
+              This movie blends high-octane action sequences with emotional drama, set against the backdrop of a bank heist gone wrong.
+              <p style={{marginTop:'10px'}}><CalendarDayFill/> Release: 2/5/2024</p>
+              <p style={{marginTop:'10px'}}><Alarm/> Time: 2 Hr 30 min</p>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+
+        <Col lg={4} md={6} sm={12}>
+          <Card style={{ width: '100%' }}>
+            <Card.Img variant="top" src={gladiator} />
+            <Card.Body>
+              <Card.Title class="cart_title">Gladiator 2</Card.Title>
+              <Card.Text>
+              The exiled Prince of Rome, alongside Denzel Washington as Macrinus, a former slave plotting to overthrow the twin emperors Geta.
+              <p style={{marginTop:'10px'}}><CalendarDayFill/> Release: 2/5/2022</p>
+              <p style={{marginTop:'10px'}}><Alarm/> Time: 2 Hr 40 min</p>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+
+        <Col lg={4} md={6} sm={12}>
+          <Card style={{ width: '100%' }}>
+            <Card.Img variant="top" src={dune} />
+            <Card.Body>
+              <Card.Title class="cart_title">Dune</Card.Title>
+              <Card.Text>
+              The protagonist, Paul Atreides (Timothée Chalamet), is the heir to House Atreides. His family is given control of Arrakis.
+              <p style={{marginTop:'10px'}}><CalendarDayFill/> Release: 15/5/2021</p>
+              <p style={{marginTop:'10px'}}><Alarm/> Time: 2 Hr 10 min</p>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
 
       </Row>
 
-      <Row id='brand_title_logos'>
 
+      <Row id="favourites_title">
+        <h2>Most Popular</h2>
+      </Row>
 
-        <Col  lg={4} md={12} sm={12} xs={12} style={{textAlign:'left', padding:'40px 20px'}}>
-        <Amazon size={30} style={{marginBottom:'20PX'}}/>
-        <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Amazon</p>
-        <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>One of our Top streaming partners</p>
-        </Col>
-        <Col  lg={4} md={12} sm={12} xs={12} style={{textAlign:'left', padding:'40px 20px'}}>
-        <Facebook size={30} style={{marginBottom:'20PX'}}/>
-        <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Facebook</p>
-        <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>We contribute to 15 percent of Ad Renvenue</p>
-        </Col>
-        <Col  lg={4} md={12} sm={12} xs={12} style={{textAlign:'left', padding:'40px 20px'}}>
-        <CollectionPlayFill size={30} style={{marginBottom:'20PX'}}/>
-        <p style={{fontFamily:'Poppins', fontSize:'20PX', fontWeight:'600'}}>Enjoy a Curated Collection</p>
-        <p style={{fontFamily:'Poppins', fontSize:'13PX', fontWeight:'300'}}>Find your next favorite film with our collection</p>
+      <Row id="favourites">
+
+        <Col lg={4} md={6} sm={12}>
+          <Card style={{ width: '100%' }}>
+            <Card.Img variant="top" src={batman} />
+            <Card.Body>
+              <Card.Title class="cart_title">Batman</Card.Title>
+              <Card.Text>
+              The movie stands apart from previous films by focusing on Batman's detective skills, a defining characteristic of the comic book character.
+              <p style={{marginTop:'10px'}}><CalendarDayFill/> Release: 2/5/2020</p>
+              <p style={{marginTop:'10px'}}><Alarm/> Time: 2 Hr 30 min</p>
+              </Card.Text>
+            </Card.Body>
+          </Card>
         </Col>
 
+        <Col lg={4} md={6} sm={12}>
+          <Card style={{ width: '100%' }}>
+            <Card.Img variant="top" src={bond} />
+            <Card.Body>
+              <Card.Title class="cart_title">James Bond</Card.Title>
+              <Card.Text>
+              This movie was released in 2021 after several delays and concludes the narrative arc that began with Casino Royale
+              <p style={{marginTop:'10px'}}><CalendarDayFill/> Release: 2/5/2019</p>
+              <p style={{marginTop:'10px'}}><Alarm/> Time: 2 Hr 15 min</p>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+
+        <Col lg={4} md={6} sm={12}>
+          <Card style={{ width: '100%' }}>
+            <Card.Img variant="top" src={ironman} />
+            <Card.Body>
+              <Card.Title class="cart_title">Avengers</Card.Title>
+              <Card.Text>
+              The combined efforts of iconic heroes to combat powerful threats. Below is an overview of the four main Avengers films:
+              <p style={{marginTop:'10px'}}><CalendarDayFill/> Release: 2/5/2024</p>
+              <p style={{marginTop:'10px'}}><Alarm/> Time: 2 Hr 15 min</p>
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
 
       </Row>
 
@@ -252,6 +333,9 @@ export const Home = () => {
             
         </Col>
       </Row>
+
+
+      
 
 
 

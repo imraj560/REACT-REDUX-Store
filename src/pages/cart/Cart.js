@@ -57,8 +57,8 @@ const Cart = () => {
         </Row>
 
         <div className='cartContainer'>
-          <Row>
-            <p style={{fontSize:'20px'}}>Your items,  <span style={{fontWeight:'600', color:'gray'}}>{user.email}</span></p>
+          <Row id="heading">
+            <p id="cart_heading">Hi,  <span id="email_address" style={{fontWeight:'600', color:'gray'}}>{user.email}</span></p>
           </Row>
             <Table responsive="sm">
               <thead>

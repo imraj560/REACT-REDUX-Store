@@ -4,7 +4,7 @@
       "image": "https://m.media-amazon.com/images/M/MV5BMTY1NTI0ODUyOF5BMl5BanBnXkFtZTgwNTEyNjQ0MDE@._V1_.jpg",
       "price": "12.76",
       "category": "animation",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":" Directed by Pete Docter, it is a heartwarming and imaginative story set in a world where monsters harness children's screams as an energy source.",
       "rating":4,
       "Release":2001,
       "Runtime":"2HR 30MIN"
@@ -15,7 +15,7 @@
       "image": "https://m.media-amazon.com/images/M/MV5BMTc5NjExNTA5OV5BMl5BanBnXkFtZTYwMTQ0ODY2._V1_FMjpg_UX1000_.jpg",
       "price": "120.65",
       "category": "animation",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":"Directed by Andrew Stanton and co-directed by Lee Unkrich, the movie is a heartwarming and visually stunning tale of family, perseverance, and friendship set in the vibrant underwater world of the Great Barrier Reef.",
       "rating":3,
       "Release":2004,
       "Runtime":"2HR"
@@ -26,7 +26,7 @@
       "image": "https://m.media-amazon.com/images/M/MV5BMzA2NDkwODAwM15BMl5BanBnXkFtZTgwODk5MTgzMTE@._V1_FMjpg_UX1000_.jpg",
       "price": "34.87",
       "category": "animation",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":"The Captain America movie series is a cornerstone of the Marvel Cinematic Universe (MCU) and follows the journey of Steve Rogers, a super-soldier who becomes the symbol of hope and freedom during World War II and beyond.",
       "rating":2,
       "Release":2011,
       "Runtime":"2HR 45MIN"
@@ -38,55 +38,59 @@
       "image": "https://m.media-amazon.com/images/M/MV5BMjE5MzcyNjk1M15BMl5BanBnXkFtZTcwMjQ4MjcxOQ@@._V1_FMjpg_UX1000_.jpg",
       "price": "90.87",
       "category": "animation",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":"Iron Man is the first film in the Marvel Cinematic Universe (MCU), released in 2008. Directed by Jon Favreau, it marks the beginning of the MCU and introduced audiences to Tony Stark, a billionaire genius and industrialist, who becomes the armored superhero Iron Man.",
       "rating":1,
       "Release":2008,
       "Runtime":"2HR"
     },
-    {
-      "id": 8,
-      "title": "Spider Man",
-      "image": "https://m.media-amazon.com/images/M/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_.jpg",
-      "price": "67.89",
-      "category": "adventure",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
-      "rating":5,
-      "Release":2006,
-      "Runtime":"2HR 45MIN"
 
-    },
-    {
-      "id": 7,
-      "title": "Batman 2022",
-      "image": "https://m.media-amazon.com/images/M/MV5BYTExZTdhY2ItNGQ1YS00NjJlLWIxMjYtZTI1MzNlMzY0OTk4XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
-      "price": "45.60",
-      "category": "adventure",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
-      "rating":3,
-      "Release":2022,
-      "Runtime":"3HR 20MIN"
-    },
-    {
-      "id": 6,
-      "title": "Superman Returns",
-      "image": "https://m.media-amazon.com/images/M/MV5BNzY2ZDQ2MTctYzlhOC00MWJhLTgxMmItMDgzNDQwMDdhOWI2XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_FMjpg_UX1000_.jpg",
-      "price": "50.78",
-      "category": "adventure",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
-      "rating":5,
-      "Release":2002,
-      "Runtime":"2HR 30MIN"
-    },
     {
       "id": 5,
       "title": "Toy Story",
       "image": "https://m.media-amazon.com/images/M/MV5BMDU2ZWJlMjktMTRhMy00ZTA5LWEzNDgtYmNmZTEwZTViZWJkXkEyXkFqcGdeQXVyNDQ2OTk4MzI@._V1_.jpg",
       "price": "90.88",
       "category": "action",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":"Toy Story is a groundbreaking animated film produced by Pixar Animation Studios and released by Walt Disney Pictures in 1995. Directed by John Lasseter, it was the first feature-length film entirely created using CGI (Computer-Generated Imagery).",
       "rating":2,
       "Release":2023,
       "Runtime":"2HR 30MIN"
+    },
+
+    {
+      "id": 6,
+      "title": "Superman Returns",
+      "image": "https://m.media-amazon.com/images/M/MV5BNzY2ZDQ2MTctYzlhOC00MWJhLTgxMmItMDgzNDQwMDdhOWI2XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_FMjpg_UX1000_.jpg",
+      "price": "50.78",
+      "category": "adventure",
+      "description":"Superman Returns is a 2006 superhero film directed by Bryan Singer, intended as a continuation of the original Superman film series, particularly Superman: The Movie (1978), rather than a direct remake or reboot",
+      "rating":5,
+      "Release":2002,
+      "Runtime":"2HR 30MIN"
+    },
+
+    {
+      "id": 7,
+      "title": "Batman 2022",
+      "image": "https://m.media-amazon.com/images/M/MV5BYTExZTdhY2ItNGQ1YS00NjJlLWIxMjYtZTI1MzNlMzY0OTk4XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
+      "price": "45.60",
+      "category": "adventure",
+      "description":"The Batman (2022) is a dark and gritty reboot of the Batman film series, directed by Matt Reeves. The film presents a fresh take on the iconic DC Comics superhero, focusing on a younger, less experienced Bruce Wayne in his second year of crime-fighting.",
+      "rating":3,
+      "Release":2022,
+      "Runtime":"3HR 20MIN"
+    },
+
+    {
+      "id": 8,
+      "title": "Spider Man",
+      "image": "https://m.media-amazon.com/images/M/MV5BZDEyN2NhMjgtMjdhNi00MmNlLWE5YTgtZGE4MzNjMTRlMGEwXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_.jpg",
+      "price": "67.89",
+      "category": "adventure",
+      "description":"The Spider-Man movie series includes several adaptations of the popular Marvel Comics character, created by writer Stan Lee and artist Steve Ditko. Spider-Man (Peter Parker) is a young man who gains spider-like abilities after being bitten by a radioactive spider.",
+      "rating":5,
+      "Release":2006,
+      "Runtime":"2HR 45MIN"
+
     },
    
     {
@@ -95,7 +99,7 @@
       "image": "https://m.media-amazon.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_.jpg",
       "price": "23.56",
       "category": "action",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":"Hulk refers to multiple film adaptations of the Marvel Comics character, who is the alter ego of Dr. Bruce Banner, a brilliant scientist who transforms into a giant, powerful green creature when angered or stressed.",
       "rating":4,
       "Release":2007,
       "Runtime":"2HR 30MIN"
@@ -106,7 +110,7 @@
       "image": "https://m.media-amazon.com/images/M/MV5BYjcyYTk0N2YtMzc4ZC00Y2E0LWFkNDgtNjE1MzZmMGE1YjY1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX1000_.jpg",
       "price": "98.87",
       "category": "action",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":"Ant-Man is a 2015 superhero film produced by Marvel Studios and based on the Marvel Comics character Ant-Man, who can shrink to the size of an ant while retaining his strength. Directed by Peyton Reed, Ant-Man is part of the Marvel Cinematic Universe",
       "rating":3,
       "Release":2009,
       "Runtime":"2HR 45MIN"
@@ -117,7 +121,7 @@
       "image": "https://m.media-amazon.com/images/M/MV5BOGE4NzU1YTAtNzA3Mi00ZTA2LTg2YmYtMDJmMThiMjlkYjg2XkEyXkFqcGdeQXVyNTgzMDMzMTg@._V1_.jpg",
       "price": "200.00",
       "category": "action",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":"Thor is a 2011 superhero film based on the Marvel Comics character of the same name. Directed by Kenneth Branagh, it is the fourth installment in the Marvel Cinematic Universe (MCU) and serves as the origin story for Thor (played by Chris Hemsworth)",
       "rating":4,
       "Release":2012,
       "Runtime":"2HR 30MIN"
@@ -128,7 +132,7 @@
       "image": "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_.jpg",
       "price": "11.34",
       "category": "romantic",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":"Black Panther is a 2018 superhero film produced by Marvel Studios and directed by Ryan Coogler. It is the 18th film in the Marvel Cinematic Universe (MCU) and focuses on T'Challa, the newly crowned king of Wakanda, a fictional, technologically advanced African nation",
       "rating":5,
       "Release":2011,
       "Runtime":"2HR 30MIN"
@@ -139,7 +143,7 @@
       "image": "https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
       "price": "67.77",
       "category": "romantic",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":"The Avengers (2012) is a landmark superhero film directed by Joss Whedon, produced by Marvel Studios, and the sixth installment in the Marvel Cinematic Universe (MCU). It is the culmination of the first phase of the MCU and brings together Earth's mightiest heroe",
       "rating":1,
       "Release":2015,
       "Runtime":"2HR 30MIN"
@@ -150,7 +154,7 @@
       "image": "https://m.media-amazon.com/images/M/MV5BM2JkNGU0ZGMtZjVjNS00NjgyLWEyOWYtZmRmZGQyN2IxZjA2XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_FMjpg_UX1000_.jpg",
       "price": "22.34",
       "category": "romantic",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":"The Bourne Identity is a 2002 action-thriller film directed by Doug Liman, based on the 1980 novel by Robert Ludlum. It stars Matt Damon as Jason Bourne, a man who suffers from amnesia and must piece together his identity while being pursued by assassins",
       "rating":5,
       "Release":2009,
       "Runtime":"2HR 30MIN"
@@ -162,7 +166,7 @@
       "image": "https://m.media-amazon.com/images/M/MV5BOGFjYWNkMTMtMTg1ZC00Y2I4LTg0ZTYtN2ZlMzI4MGQwNzg4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
       "price": "12.34",
       "category": "romantic",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":"Godzilla is a Japanese science fiction film franchise that began in 1954 with the original Godzilla film directed by Ishirō Honda. The franchise centers around the giant monster Godzilla, a creature awakened and empowered by nuclear radiation.",
       "rating":2,
       "Release":2013,
       "Runtime":"2HR 30MIN"
@@ -173,7 +177,7 @@
       "image": "https://m.media-amazon.com/images/M/MV5BMWUxNjZiNTAtZmMwMi00MmYxLTkxZGEtZWE1MzU0OWFjOTNhXkEyXkFqcGdeQXVyNzk1MzI3MTI@._V1_FMjpg_UX1000_.jpg",
       "price": "56.66",
       "category": "drama",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":"Kong: Skull Island (2017) is a reboot of the King Kong franchise, directed by Jordan Vogt-Roberts. It is part of the MonsterVerse, a shared cinematic universe that includes the likes of Godzilla and King Kong. This film serves as an origin story for Kong",
       "rating":4,
       "Release":2007,
       "Runtime":"2HR 30MIN"
@@ -184,7 +188,7 @@
       "image": "https://m.media-amazon.com/images/M/MV5BMTQ5NjQ0NDI3NF5BMl5BanBnXkFtZTcwNDI0MjEzMw@@._V1_FMjpg_UX1000_.jpg",
       "price": "12.44",
       "category": "drama",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":"The Pursuit of Happyness (2006) is an inspirational drama film directed by Gabriele Muccino and starring Will Smith in one of his most critically acclaimed roles. The film is based on the true story of Chris Gardner, a struggling single father who works tirelessly to create a better life for himself and his young son",
       "rating":5,
       "Release":2001,
       "Runtime":"2HR 30MIN"
@@ -195,7 +199,7 @@
       "image": "https://m.media-amazon.com/images/M/MV5BMTY3MTI5NjQ4Nl5BMl5BanBnXkFtZTcwOTU1OTU0OQ@@._V1_FMjpg_UX1000_.jpg",
       "price": "67.77",
       "category": "drama",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":"Pacific Rim (2013) is a science fiction action film directed by Guillermo del Toro. It is set in a future where Earth is under attack by monstrous creatures known as Kaiju that emerge from a breach in the ocean. To combat this threat, humanity builds massive humanoid robots called Jaegers",
       "rating":2,
       "Release":2010,
       "Runtime":"2HR 30MIN"
@@ -207,7 +211,7 @@
       "image": "https://m.media-amazon.com/images/M/MV5BMTkwOTY0MTc1NV5BMl5BanBnXkFtZTcwMDQwNjA2NQ@@._V1_.jpg",
       "price": "12.34",
       "category": "drama",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":"Transformers is a film series based on the popular toy franchise of the same name, created by Hasbro. The movies focus on the battle between two factions of sentient robotic aliens—Autobots and Decepticons—who can transform into vehicles, machinery, and other objects.",
       "rating":1,
       "Release":2005,
       "Runtime":"2HR 30MIN"
@@ -218,7 +222,7 @@
       "image": "https://m.media-amazon.com/images/M/MV5BZWYzZDNhODMtYzk2ZC00ZTE2LTk2MTgtY2M3NjgyYzVjMTcyXkEyXkFqcGdeQXVyNTU1OTA4OTg@._V1_.jpg",
       "price": "55.55",
       "category": "drama",
-      "description":"ed ut perspiciatis unde omnis iste natus error sit voluptatem",
+      "description":"The Creed film series is a spin-off and continuation of the Rocky franchise, focusing on the life of Adonis Creed, the son of Apollo Creed, Rocky Balboa's former rival and close friend. The series is directed by Ryan Coogler (for the first film) and stars Michael B. Jordan as Adonis Creed. It blends boxing, drama, and themes of legacy, family, and self-discovery",
       "rating":5,
       "Release":2014,
       "Runtime":"2HR 30MIN"
