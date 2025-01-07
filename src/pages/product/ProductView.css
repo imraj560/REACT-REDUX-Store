@@ -28,6 +28,28 @@
 
 }
 
+@media only screen and (max-width: 570px){
+
+    #product_banner_text{
+
+        text-align: left;
+        color:black;
+        font-size: 35px;
+        font-weight: 600;
+      
+     }
+
+
+     #productDiv_title{
+
+        font-weight: 600;
+        font-size: 20px;
+        
+     
+     }
+
+}
+
 
 
 
