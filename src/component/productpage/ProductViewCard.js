@@ -7,13 +7,13 @@ import './ProductViewCard.css'
 
 const ProductViewCard = ({props})=>{
 
-    const{id, title, price, description, image, rating} = props;
+    const{id, title, price, description, image, rating, category} = props;
 
    
 
     return(
         <Card id="productView_Card" style={{ width: '100%', borderRadius:'0px'}}>
-        <NavLink to={`/productView/${id}`}> {/**Reminder: you have to use back ticks in template literals */}
+        <NavLink to={`/productView/${category}/${id}`}>
             <Card.Img variant="top" src={image} style={{height:"400px"}} />
         </NavLink>    
         

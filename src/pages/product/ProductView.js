@@ -8,40 +8,77 @@ import {Button} from "react-bootstrap";
 import { Card } from "react-bootstrap";
 import Layout from "../../component/layout/layout";
 import MovieCard from "../../component/movie/MovieCard";
-import { Calendar3, ClockFill, Star } from "react-bootstrap-icons";
+import ProductViewCard from "../../component/productpage/ProductViewCard";
+import { Calendar3, ClockFill, HeartArrow, Star } from "react-bootstrap-icons";
 import StarRating from "../../component/rating/StarRating";
 import './ProductView.css';
+import { all } from "axios";
 
 const ProductView = () => {
+  const [singleProductData, setSingleProductData] = useState([]);
+  const [realtedData, setRelatedData] = useState([])
+  const [allData, setAllData] = useState([])
+  const {id, category} = useParams();
 
-    const [pdata, setPdata] = useState([]);
-    const param = useParams();
+  useEffect(()=>{
 
-    useEffect(()=>{
+    const fetchData =  async() => {
 
-    const asyncFunction = async()=>{
+      await fetch('/utils/data.json', {
 
-        // let data = await fetch(`https://dummyjson.com/products/${param.id}`).then((response)=>{
-          let data = await fetch('../utils/data.json').then((response)=>{
+        method:'GET',
+        header: {
 
-        return response.json();
+          'Content-Type':'application/json'
+        }
 
-        }).then((data)=>{
+      }).then((response)=>{
 
-          
-          const newParam = param.id - 1;
-          setPdata(data[newParam]);
+        return response.json()
+
+      }).then((data)=>{
+
+          setAllData(data)
+
          
 
-        })
-      }
+      })
 
-      asyncFunction();
+    }
 
-      console.log(pdata);
+    fetchData()
 
-    }, [])
+
+
+  }, [id, category]);
+
+
+  useEffect(()=>{
+
+   const filterSingleData = allData.filter((singleData)=>{
+
+    return singleData.id == id;
+
+   })
+
+  setSingleProductData(filterSingleData)
+
+  }, [allData])
+
+
+  useEffect(()=>{
+
+    const filterRelatedData = allData.filter((singleData)=>{
+
+      return singleData.category == `${category}`
+    })
+
+    setRelatedData(filterRelatedData.slice(0,3))
+
   
+
+  },[allData])
+   
 
 
     return(
@@ -50,34 +87,81 @@ const ProductView = () => {
 
         
 
-        <Container>
+        <Container id="productDisplayContainer">
 
-           <Row id="product_banner">
+        <Row id="title_row">
 
-            <p id="product_banner_text">Product Display</p>
-
-          </Row>
-
-          <Row id="productDiv">
-
-          <Col lg={8}>
-          <p id="productDiv_title">{pdata.title}</p>
-          <p>
-          {pdata.description}
-          </p>
-          <p style={{marginBottom:'32px', marginTop:'30PX'}}><Calendar3 size={22} style={{fontWeight:600, marginRight:'7px'}}/> Release Date:  {pdata.Release}</p>
-          <p style={{marginBottom:'32px'}}><ClockFill size={22} style={{fontWeight:600, marginRight:'7px'}}/> Run Time:  {pdata.Runtime}</p>
-          <p style={{display:'flex', flexDirection:'row'}}><Star size={22} style={{fontWeight:600, marginRight:'7px'}}/> <StarRating rating={pdata.rating} totalStars={5} /></p>
-          </Col>
-
-          
-          <Col lg={4}>
-          
-          <MovieCard movieProp={pdata} />
-
-          </Col>
+        <p id="display_title">Product Display</p>
 
         </Row>
+
+        <Row id="productDiv">
+
+            <Col lg={6} >
+            {singleProductData.map((singleData)=>{
+
+                return (
+                  <>
+
+                <h3 id="description">Description</h3><br/>
+                <p style={{fontWeight:'600'}}>{singleData.title}</p>
+                <p>
+                {singleData.description}
+                </p>
+                <p style={{marginBottom:'25px', marginTop:'30PX'}}><Calendar3 size={22} style={{fontWeight:600, marginRight:'7px'}}/> Release Date:  {singleData.Release}</p>
+                <p style={{marginBottom:'25px'}}><ClockFill size={22} style={{fontWeight:600, marginRight:'7px'}}/> Run Time:  {singleData.Runtime}</p>
+                <p style={{display:'flex', flexDirection:'row'}}><Star size={22} style={{fontWeight:600, marginRight:'7px'}}/>  Rating:  <StarRating rating={singleData.rating} totalStars={5} /></p>
+                  
+                  </>
+                 
+                  
+                )
+            })}
+           
+            </Col>
+
+
+            <Col id="cardDiv" lg={6}>
+
+            {singleProductData.map((singleData)=>{
+
+                      return (
+                        <>
+                        <MovieCard movieProp={singleData} />
+
+                        </>
+                      
+                        
+                      )
+                      })}
+
+           
+
+            </Col>
+
+            </Row>
+
+            <Row id="relatedDivTitle">
+
+              <h2>Related Movies</h2>
+
+              {
+                realtedData.map((singleData)=>{
+
+                    return (
+
+                      <>
+                        <Col lg={4} md={6} id="relatedCol">
+                            <ProductViewCard props={singleData} />
+                        </Col>
+                      </>
+                    )
+                })
+              }
+
+
+
+            </Row>
       </Container>
 
         

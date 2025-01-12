@@ -6,6 +6,11 @@
     margin-top: 60px;
 }
 
+#productDisplayContainer{
+
+   width:50%;
+}
+
 #product_banner_text{
 
     text-align: left;
@@ -14,13 +19,25 @@
     font-weight: 600;
   
  }
+
+ #title_row{
+
+   margin-top: 50PX;
+   margin-bottom: 70px;
+ }
  
  
  
+#display_title{
+
+   font-family: 'Poppins';
+   font-weight: 600;
+   font-size: 40px;
+
+}
 
 
-
-#productDiv_title{
+#productDiv_title > p{
 
    font-weight: 600;
    font-size: 30px;
@@ -28,7 +45,59 @@
 
 }
 
+#relatedDivTitle{
+
+   margin-top: 70px;
+}
+
+#relatedDivTitle > h2{
+
+   font-weight: 600;
+   font-size: 40px;
+   margin-bottom: 30px;
+}
+
+#description{
+
+   font-weight: 600;
+   font-size: 30px;
+}
+
+@media only screen and (max-width: 1230px){
+
+   #productDisplayContainer{
+
+      width:64%;
+   }
+}
+
+@media only screen and (max-width: 992px){
+
+   #productDisplayContainer{
+
+      width:50%;
+   }
+
+   #cardDiv{
+
+      margin-top: 20PX;
+   }
+
+   #relatedCol{
+
+      margin-top: 20px;
+   }
+
+}
+
 @media only screen and (max-width: 570px){
+
+
+   #description{
+
+      font-weight: 600;
+      font-size: 20px;
+   }
 
     #product_banner_text{
 
@@ -39,6 +108,11 @@
       
      }
 
+     #productDisplayContainer{
+
+      width:75%;
+   }
+
 
      #productDiv_title{
 
@@ -47,6 +121,17 @@
         
      
      }
+
+     #display_title{
+
+      font-family: 'Poppins';
+      font-weight: 600;
+      font-size: 30px;
+   
+   }
+   
+   
+  
 
 }
 
