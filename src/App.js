@@ -27,7 +27,7 @@ function App() {
               <Route path="/" element={<Home/>}/>
               <Route path="/login" element={<Login/>}/>
               <Route path="/register" element={<Register/>}/>
-              <Route path="/productview/:id" element={<ProductView/>}/>
+              <Route path="/productview/:category/:id" element={<ProductView/>}/>
               <Route path="/store" element={<Movie/>}/>
               <Route element={<AuthComponent/>}>
                

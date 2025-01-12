@@ -40,7 +40,7 @@ export const Home = () => {
       }).then((data)=>{
 
         setProducts(data);
-        console.log(products)
+       
       })
 
     }
