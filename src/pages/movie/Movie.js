@@ -173,7 +173,7 @@ useEffect(()=>{
         <input placeholder='search'  onChange = {onSearchChange} style={{marginBottom:"30px"}} type="text" class="form-control" id="search-box" aria-describedby="basic-addon3" />
       </div>
 
-      <label style={{fontSize:"18px", marginBottom:"20px"}}>Sort Products</label>
+      <label style={{fontSize:"18px", marginBottom:"20px"}}>Sort Movies</label>
       <div class="form-check">
       <input type="checkbox" class="form-check-input" value='animation' onChange={onCheckChange}/>
       <label class="form-check-label" for="exampleCheck1">Animation</label>

@@ -143,7 +143,7 @@ const ProductView = () => {
 
             <Row id="relatedDivTitle">
 
-              <h2>Related Movies</h2>
+              <h2 id="related_title">Related Movies</h2>
 
               {
                 realtedData.map((singleData)=>{
