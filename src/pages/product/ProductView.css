@@ -90,6 +90,18 @@
 
 }
 
+@media only screen and (max-width: 768px){
+
+   #related_title{
+
+      font-size: 20px;
+
+
+   }
+
+   
+}
+
 @media only screen and (max-width: 570px){
 
 
@@ -129,11 +141,15 @@
       font-size: 30px;
    
    }
+
+  
    
    
   
 
 }
+
+
 
 
 
