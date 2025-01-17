@@ -50,7 +50,7 @@
    margin-top: 70px;
 }
 
-#relatedDivTitle > h2{
+#related_title{
 
    font-weight: 600;
    font-size: 40px;
@@ -94,7 +94,9 @@
 
    #related_title{
 
-      font-size: 20px;
+      font-weight: 600;
+      font-size: 25px;
+      font-family: 'Poppins';
 
 
    }
@@ -140,6 +142,11 @@
       font-weight: 600;
       font-size: 30px;
    
+   }
+
+   #related_title{
+
+      font-size: 25px;
    }
 
   
