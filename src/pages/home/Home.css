@@ -4,10 +4,10 @@
     height: 50vh;
     margin-bottom: 150px;
     /* background-color: gray; */
-    background-image: url('../../assets/images/banner_home.jpg');
+    background-image: url('../../assets/images/banner_home.jpeg');
     background-size: cover;
     background-repeat:no-repeat;
-    background-position: center center;
+    background-position: center top;
 }
 
 #text_banner > p{
