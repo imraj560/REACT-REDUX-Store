@@ -13,7 +13,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Button, NavDropdown, Table } from 'react-bootstrap';
 import logo from '../../assets/images/logo.png';
 import { Cart, ArrowRightShort, XCircle, PlusCircle, DashCircle, CircleFill } from 'react-bootstrap-icons';
-import { Unlock } from 'react-bootstrap-icons';
+import { Unlock, Cart2, BagFill } from 'react-bootstrap-icons';
 import { removeCartItem, incrementQuantity, decrementQuantity} from '../../features/cartSlice';
 import CartComponent from '../authNav/CartComponent';
 
@@ -99,7 +99,8 @@ const Header = () => {
           </Nav>
           <Nav>
            
-              
+           {totalQty > 0 ? (
+
             <NavDropdown title={`Cart ${totalQty}`} style={{fontWeight:660}} id="basic-nav-dropdown">
             
              <Table style={{fontSize:'11PX'}}>
@@ -171,6 +172,10 @@ const Header = () => {
               <NavLink style={{textDecoration:'none', color:'black', fontSize:'14px'}} to={'/cart'}><Button variant='default' style={{background:'black', color:'white', borderRadius:'0px'}}>Checkout <ArrowRightShort /></Button></NavLink>
               </NavDropdown.Item>
             </NavDropdown>
+
+           ): ( <Nav.Link><BagFill style={{fontSize:"20PX",fontWeight:"600"}}/></Nav.Link>)}
+              
+            
           
          
           <Nav.Link><NavLink to={'/store'} style={{textDecoration:"none", color:"black"}}>Store</NavLink></Nav.Link>
