@@ -9,16 +9,28 @@ import { Card } from "react-bootstrap";
 import Layout from "../../component/layout/layout";
 import MovieCard from "../../component/movie/MovieCard";
 import ProductViewCard from "../../component/productpage/ProductViewCard";
-import { Calendar3, ClockFill, HeartArrow, Star } from "react-bootstrap-icons";
+import { Calendar3, ClockFill, HeartArrow, Star, BagFill, PlusCircle, DashCircle } from "react-bootstrap-icons";
 import StarRating from "../../component/rating/StarRating";
+import { useDispatch, useSelector } from "react-redux";
+import { incrementQuantity, decrementQuantity } from "../../features/cartSlice";
 import './ProductView.css';
 import { all } from "axios";
 
 const ProductView = () => {
   const [singleProductData, setSingleProductData] = useState([]);
   const [realtedData, setRelatedData] = useState([])
-  const [allData, setAllData] = useState([])
+  const [allData, setAllData] = useState([]);
+  const [singleCart, setSingleCart] = useState([]);
   const {id, category} = useParams();
+  
+  const dispatch = useDispatch();
+
+  const cartItem = useSelector((state) => state.cart.cart.filter((item)=>item.id === Number(id)));
+  
+
+  
+
+
 
   useEffect(()=>{
 
@@ -48,6 +60,8 @@ const ProductView = () => {
 
     fetchData()
 
+
+   
 
 
   }, [id, category]);
@@ -103,21 +117,47 @@ const ProductView = () => {
                 return (
                   <>
 
-                <h3 id="description">Description</h3><br/>
-                <p style={{fontWeight:'600'}}>{singleData.title}</p>
-                <p>
-                {singleData.description}
-                </p>
-                <p style={{marginBottom:'25px', marginTop:'30PX'}}><Calendar3 size={22} style={{fontWeight:600, marginRight:'7px'}}/> Release Date:  {singleData.Release}</p>
-                <p style={{marginBottom:'25px'}}><ClockFill size={22} style={{fontWeight:600, marginRight:'7px'}}/> Run Time:  {singleData.Runtime}</p>
-                <p style={{display:'flex', flexDirection:'row'}}><Star size={22} style={{fontWeight:600, marginRight:'7px'}}/>  Rating:  <StarRating rating={singleData.rating} totalStars={5} /></p>
-                  
+                  <h3 id="description">Description</h3><br/>
+                  <p style={{fontWeight:'600'}}>{singleData.title}</p>
+                  <p style={{textAlign:"justify"}}>
+                  {singleData.description}
+                  </p>
+                  <p style={{marginBottom:'25px', marginTop:'30PX'}}><Calendar3 size={22} style={{fontWeight:600, marginRight:'7px'}}/> Release Date:  {singleData.Release}</p>
+                  <p style={{marginBottom:'25px'}}><ClockFill size={22} style={{fontWeight:600, marginRight:'7px'}}/> Run Time:  {singleData.Runtime}</p>
+                  <p style={{display:'flex', flexDirection:'row'}}><Star size={22} style={{fontWeight:600, marginRight:'7px'}}/>  Rating:  <StarRating rating={singleData.rating} totalStars={5} /></p>
+                    
                   </>
                  
                   
                 )
             })}
+
+             <p style={{padding:"20px 20px 20px 5px", background:'black', color:"white"}}><BagFill size={23} style={{marginRight:'3PX'}}/> Cart : 
+
+                {
+                cartItem.length > 0 ? (
+
+                  cartItem.map((data)=>{
+                  return(
+                    <>
+                       <PlusCircle style={{marginRight:'10px', marginLeft:'5px', cursor:"pointer"}} size={25} onClick={()=>dispatch(incrementQuantity(data.id))}/>
+                        {data.quantity}
+                       <DashCircle style={{marginLeft:'10px', cursor:"pointer"}} size={25} onClick={()=>dispatch(decrementQuantity(data.id))}/>
+                    </>
+                  )
+                })
+
+                ) : (<> 0</>)  
+               
+              }
+
+             </p>
+
            
+
+           
+
+          
             </Col>
 
 
@@ -140,6 +180,8 @@ const ProductView = () => {
             </Col>
 
             </Row>
+
+
 
             <Row id="relatedDivTitle">
 

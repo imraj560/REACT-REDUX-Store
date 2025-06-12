@@ -44,7 +44,7 @@ const MovieCard = ({movieProp}) => {
             <Card.Text>
              {price}
             </Card.Text>
-            <Button style={{borderRadius:"0px", border:'1px solid black'}} variant="default"  onClick={cartVerification}>Add To Cart</Button>
+            <Button style={{borderRadius:"0px", border:'2px solid black', background:"white", color:'black'}} variant="default"  onClick={cartVerification}>Add To Cart</Button>
           </Card.Body>
         </Card>
 
