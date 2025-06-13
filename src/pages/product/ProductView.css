@@ -33,7 +33,25 @@
    font-family: 'Poppins';
    font-weight: 600;
    font-size: 40px;
+   position: relative;
+   padding-bottom: 10px;
+   padding-left: 0px;
 
+}
+
+#display_title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;          /* length of dash */
+  height: 7px;          /* thickness of dash */
+  background-color: black; /* color of dash */
+}
+
+#productDiv{
+
+   padding-left: 0px !important;
 }
 
 
@@ -54,13 +72,41 @@
 
    font-weight: 600;
    font-size: 40px;
-   margin-bottom: 30px;
+   margin-bottom: 60px;
+    position: relative;
+   padding-bottom: 10px;
+   padding-left: 0px;
+}
+
+#related_title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;          /* length of dash */
+  height: 7px;          /* thickness of dash */
+  background-color: black; /* color of dash */
 }
 
 #description{
 
    font-weight: 600;
    font-size: 30px;
+}
+
+#cardDiv{
+
+       padding: 0px 0px 0px 80px;
+   }
+
+
+
+@media only screen and (min-width: 2000px){
+
+   #cardDiv{
+
+       padding: 0px 0px 0px 200px;
+   }
 }
 
 @media only screen and (max-width: 1230px){
@@ -81,6 +127,7 @@
    #cardDiv{
 
       margin-top: 20PX;
+      padding: 0px;
    }
 
    #relatedCol{
