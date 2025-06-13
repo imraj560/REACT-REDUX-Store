@@ -14,7 +14,7 @@ import { Button, NavDropdown, Table } from 'react-bootstrap';
 import logo from '../../assets/images/logo.png';
 import { Cart, ArrowRightShort, XCircle, PlusCircle, DashCircle, CircleFill } from 'react-bootstrap-icons';
 import { Unlock, Cart2, BagFill } from 'react-bootstrap-icons';
-import { removeCartItem, incrementQuantity, decrementQuantity} from '../../features/cartSlice';
+import { removeCartItem, incrementQuantity, decrementQuantity, nullCart} from '../../features/cartSlice';
 import CartComponent from '../authNav/CartComponent';
 
 const Header = () => {
@@ -74,6 +74,7 @@ const Header = () => {
           
       toast.success("Successfully signed out");
       dispatch(logout());
+      dispatch(nullCart());
       navigate('/login');
 
       

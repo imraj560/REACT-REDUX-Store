@@ -8,8 +8,9 @@ import {Button} from "react-bootstrap";
 import { Card } from "react-bootstrap";
 import Layout from "../../component/layout/layout";
 import MovieCard from "../../component/movie/MovieCard";
+import MovieButton from "../../component/movie/MovieButton";
 import ProductViewCard from "../../component/productpage/ProductViewCard";
-import { Calendar3, ClockFill, HeartArrow, Star, BagFill, PlusCircle, DashCircle } from "react-bootstrap-icons";
+import { Calendar3, ClockFill, HeartArrow, Star, BagFill, PlusCircle, DashCircle, CartFill } from "react-bootstrap-icons";
 import StarRating from "../../component/rating/StarRating";
 import { useDispatch, useSelector } from "react-redux";
 import { incrementQuantity, decrementQuantity } from "../../features/cartSlice";
@@ -105,13 +106,13 @@ const ProductView = () => {
 
         <Row id="title_row">
 
-        <p id="display_title">Product Display</p>
+        <h2 id="display_title">Product Display</h2>
 
         </Row>
 
         <Row id="productDiv">
 
-            <Col lg={6} >
+            <Col lg={6} style={{paddingLeft:'0PX', position:'relative'}}>
             {singleProductData.map((singleData)=>{
 
                 return (
@@ -124,7 +125,7 @@ const ProductView = () => {
                   </p>
                   <p style={{marginBottom:'25px', marginTop:'30PX'}}><Calendar3 size={22} style={{fontWeight:600, marginRight:'7px'}}/> Release Date:  {singleData.Release}</p>
                   <p style={{marginBottom:'25px'}}><ClockFill size={22} style={{fontWeight:600, marginRight:'7px'}}/> Run Time:  {singleData.Runtime}</p>
-                  <p style={{display:'flex', flexDirection:'row'}}><Star size={22} style={{fontWeight:600, marginRight:'7px'}}/>  Rating:  <StarRating rating={singleData.rating} totalStars={5} /></p>
+                  <p style={{display:'flex', flexDirection:'row', marginBottom:"100px"}}><StarRating rating={singleData.rating} totalStars={5} /></p>
                     
                   </>
                  
@@ -132,7 +133,7 @@ const ProductView = () => {
                 )
             })}
 
-             <p style={{padding:"20px 20px 20px 5px", background:'black', color:"white"}}><BagFill size={23} style={{marginRight:'3PX'}}/> Cart : 
+             <p style={{position:"absolute",bottom:"0PX", width:"100%",padding:"20px 20px 20px 5px", background:'black', color:"white"}}><CartFill size={23} style={{marginRight:'3PX'}}/> Cart : 
 
                 {
                 cartItem.length > 0 ? (
@@ -147,7 +148,21 @@ const ProductView = () => {
                   )
                 })
 
-                ) : (<> 0</>)  
+                ) : (
+
+                  
+                    singleProductData.map((singleData)=>{
+
+                      return (
+                        <>
+                        <MovieButton movieProp={singleData} />
+
+                        </>
+                      
+                        
+                      )
+                      })
+                )  
                
               }
 
@@ -193,7 +208,7 @@ const ProductView = () => {
                     return (
 
                       <>
-                        <Col lg={4} md={6} id="relatedCol">
+                        <Col lg={4} md={6} id="relatedCol" style={{paddingLeft:'0PX'}}>
                             <ProductViewCard props={singleData} />
                         </Col>
                       </>
